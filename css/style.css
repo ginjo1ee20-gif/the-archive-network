@@ -1,0 +1,692 @@
+/* ===========================
+   THE ARCHIVE NETWORK
+   Version 1.0
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:#050505;
+    color:#EAEAEA;
+
+    font-family:"IBM Plex Mono", monospace;
+
+    overflow-x:hidden;
+
+}
+
+/* Boot Screen */
+
+#bootScreen{
+
+    position:fixed;
+
+    width:100%;
+    height:100vh;
+
+    background:#050505;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+.bootText{
+
+    text-align:center;
+
+}
+
+.bootText h1{
+
+    font-family:"Orbitron",sans-serif;
+
+    color:#00FFB3;
+
+    margin-bottom:30px;
+
+    letter-spacing:4px;
+
+}
+
+.bootText p{
+
+    margin:12px;
+
+    color:#00FFB3;
+
+    animation:flicker 2s infinite;
+
+}
+
+.green{
+
+    color:#00FFB3;
+
+}
+
+/* Main Website */
+
+#mainWebsite{
+
+    display:none;
+
+    animation:fadeIn 1.5s;
+
+}
+
+header{
+
+    text-align:center;
+
+    padding:40px;
+
+    border-bottom:1px solid #00FFB3;
+
+}
+
+header h1{
+
+    font-family:"Orbitron",sans-serif;
+
+    color:#00FFB3;
+
+    letter-spacing:5px;
+
+}
+
+.status{
+
+    margin-top:15px;
+
+    color:#00C8FF;
+
+}
+
+/* Navigation */
+
+nav{
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+    padding:25px;
+
+}
+
+nav a{
+
+    text-decoration:none;
+
+    color:#00FFB3;
+
+    border:1px solid #00FFB3;
+
+    padding:12px 22px;
+
+    transition:.3s;
+
+}
+
+nav a:hover{
+
+    background:#00FFB3;
+
+    color:#050505;
+
+    box-shadow:0 0 20px #00FFB3;
+
+}
+
+/* Hero */
+
+.hero{
+
+    width:90%;
+
+    max-width:900px;
+
+    margin:70px auto;
+
+    border:1px solid #00FFB3;
+
+    padding:40px;
+
+    text-align:center;
+
+}
+
+.hero h2{
+
+    font-family:"Orbitron";
+
+    color:#00FFB3;
+
+    margin-bottom:20px;
+
+}
+
+.hero p{
+
+    line-height:1.8;
+
+    margin-bottom:35px;
+
+}
+
+/* Button */
+
+.button{
+
+    display:inline-block;
+
+    text-decoration:none;
+
+    color:#00FFB3;
+
+    border:2px solid #00FFB3;
+
+    padding:15px 35px;
+
+    transition:.3s;
+
+}
+
+.button:hover{
+
+    background:#00FFB3;
+
+    color:#050505;
+
+    box-shadow:0 0 30px #00FFB3;
+
+}
+
+/* News */
+
+.news{
+
+    width:90%;
+
+    max-width:900px;
+
+    margin:auto;
+
+}
+
+.news h2{
+
+    color:#00FFB3;
+
+    margin-bottom:20px;
+
+    font-family:"Orbitron";
+
+}
+
+.card{
+
+    border:1px solid #00FFB3;
+
+    padding:25px;
+
+}
+
+.card h3{
+
+    color:#00C8FF;
+
+    margin-bottom:10px;
+
+}
+
+/* Footer */
+
+footer{
+
+    margin-top:80px;
+
+    text-align:center;
+
+    padding:30px;
+
+    border-top:1px solid #00FFB3;
+
+    color:#777;
+
+}
+
+/* CRT Scanlines */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    pointer-events:none;
+
+    background:
+
+    repeating-linear-gradient(
+
+        to bottom,
+
+        transparent 0px,
+
+        transparent 3px,
+
+        rgba(255,255,255,.03) 4px
+
+    );
+
+}
+
+/* Animations */
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+@keyframes flicker{
+
+    0%{opacity:1;}
+
+    50%{opacity:.5;}
+
+    100%{opacity:1;}
+
+}
+
+/* ===========================
+   MOBILE
+=========================== */
+
+@media (max-width:700px){
+
+    nav{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .hero{
+        padding:25px;
+    }
+
+    header h1{
+        font-size:28px;
+    }
+
+    ul{
+        margin-left:25px;
+        line-height:2;
+    }
+
+    strong{
+        color:#00FFB3;
+    }
+
+}   /* <-- This was the missing bracket */
+
+/* ===========================
+   MEDIA PAGE
+=========================== */
+
+.gallery{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+
+margin-top:20px;
+
+}
+
+.mediaCard{
+
+border:1px solid #00FFB3;
+
+padding:15px;
+
+text-align:center;
+
+transition:.3s;
+
+background:#0b0b0b;
+
+}
+
+.mediaCard:hover{
+
+transform:translateY(-6px);
+
+box-shadow:0 0 20px #00FFB3;
+
+}
+
+.mediaCard img{
+
+width:100%;
+
+height:180px;
+
+object-fit:cover;
+
+border:1px solid #00FFB3;
+
+margin-bottom:15px;
+
+}
+
+.mediaCard p{
+
+color:#00C8FF;
+
+font-size:15px;
+
+}
+
+/* ===========================
+   CONTACT PAGE
+=========================== */
+
+input,
+textarea{
+
+width:100%;
+
+padding:15px;
+
+background:#101010;
+
+border:1px solid #00FFB3;
+
+color:white;
+
+font-family:"IBM Plex Mono", monospace;
+
+margin-bottom:15px;
+
+}
+
+textarea{
+
+height:180px;
+
+resize:vertical;
+
+}
+
+button{
+
+padding:15px 30px;
+
+background:transparent;
+
+border:2px solid #00FFB3;
+
+color:#00FFB3;
+
+cursor:pointer;
+
+font-family:"Orbitron", sans-serif;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+background:#00FFB3;
+
+color:#050505;
+
+box-shadow:0 0 20px #00FFB3;
+
+}
+
+/* ======================
+   TERMINAL
+====================== */
+
+.terminal{
+
+width:80%;
+max-width:900px;
+padding:40px;
+
+border:2px solid #00FFB3;
+
+background:black;
+
+box-shadow:0 0 40px #00FFB3;
+
+}
+
+#terminalText{
+
+white-space:pre-wrap;
+
+font-size:20px;
+
+line-height:2;
+
+color:#00FFB3;
+
+font-family:"IBM Plex Mono",monospace;
+
+}
+
+/* ==========================
+   ARCHIVE OS
+========================== */
+
+.osBody{
+
+background:#030303;
+
+overflow:hidden;
+
+}
+
+.topBar{
+
+background:#111;
+
+padding:15px;
+
+color:#00FFB3;
+
+font-family:"Orbitron", sans-serif;
+
+border-bottom:2px solid #00FFB3;
+
+}
+
+.desktopIcons{
+
+display:flex;
+
+gap:40px;
+
+padding:40px;
+
+}
+
+.icon{
+
+width:100px;
+
+text-align:center;
+
+cursor:pointer;
+
+color:white;
+
+}
+
+.icon:hover{
+
+transform:scale(1.08);
+
+}
+
+.icon p{
+
+margin-top:10px;
+
+}
+
+.window{
+
+display:none;
+
+position:absolute;
+
+top:120px;
+
+left:250px;
+
+width:500px;
+
+min-width:500px;
+
+background:#101010;
+
+border:2px solid #00FFB3;
+
+box-shadow:0 0 25px #00FFB3;
+
+border-radius:8px;
+
+overflow:hidden;
+
+user-select:none;
+
+animation:popup .25s ease;
+
+}
+
+.windowTitle{
+
+background:#00FFB3;
+
+color:black;
+
+padding:10px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+font-weight:bold;
+
+}
+
+.windowTitle span{
+
+cursor:pointer;
+
+}
+
+.windowContent{
+
+padding:20px;
+
+line-height:2;
+
+}
+
+@keyframes popup{
+
+from{
+
+opacity:0;
+transform:scale(.85);
+
+}
+
+to{
+
+opacity:1;
+transform:scale(1);
+
+}
+
+}
+/* ==========================
+   TERMINAL WINDOW
+========================== */
+
+#terminalOutput{
+
+    height:260px;
+
+    overflow-y:auto;
+
+    background:#000;
+
+    padding:15px;
+
+    border:1px solid #00FFB3;
+
+    color:#00FFB3;
+
+    font-family:"IBM Plex Mono", monospace;
+
+}
+
+#terminalInput{
+
+    width:100%;
+
+    margin-top:15px;
+
+    background:#111;
+
+    color:#00FFB3;
+
+    border:1px solid #00FFB3;
+
+    padding:10px;
+
+    font-family:"IBM Plex Mono", monospace;
+
+}

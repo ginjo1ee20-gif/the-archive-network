@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Archive OS</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="osBody">
+
+<div class="desktop">
+
+<div class="topBar">
+
+    <div class="logo">
+        ARCHIVE OS v2.0
+    </div>
+
+    <div id="clock">
+        00:00:00
+    </div>
+
+</div>
+
+<div class="icon" ondblclick="openWindow('terminalWindow')">
+
+💻
+
+<p>Terminal</p>
+
+</div>
+
+<div id="terminalWindow" class="window">
+
+    <div class="windowTitle">
+
+        Archive Terminal
+
+        <span onclick="closeWindow('terminalWindow')">✖</span>
+
+    </div>
+
+    <div class="windowContent">
+
+        <div id="terminalOutput">
+
+            <p>ARCHIVE TERMINAL v1.0</p>
+            <p>Type HELP to begin.</p>
+
+        </div>
+
+        <br>
+
+        <input
+        id="terminalInput"
+        type="text"
+        placeholder="Enter Command..."
+        onkeydown="terminalEnter(event)">
+
+    </div>
+
+</div>
+
+<div class="desktopIcons">
+
+<div class="icon" ondblclick="openWindow('researchWindow')">
+
+📁
+
+<p>Research Files</p>
+
+</div>
+
+<div class="icon" ondblclick="openWindow('personnelWindow')">
+
+👤
+
+<p>Personnel</p>
+
+</div>
+
+<div class="icon" ondblclick="openWindow('cameraWindow')">
+
+📹
+
+<p>Cameras</p>
+
+</div>
+
+<div class="icon" ondblclick="openWindow('audioWindow')">
+
+🎧
+
+<p>Audio Logs</p>
+
+</div>
+
+</div>
+
+<div id="researchWindow" class="window">
+
+<div class="windowTitle">
+
+Research Files
+
+<span onclick="closeWindow('researchWindow')">✖</span>
+
+</div>
+
+<div class="windowContent">
+
+<h2>FILE-001</h2>
+
+<p>
+
+Project Sixth Door officially entered testing.
+
+Further information remains classified.
+
+</p>
+
+</div>
+
+</div>
+
+<div id="personnelWindow" class="window">
+
+<div class="windowTitle">
+
+Personnel
+
+<span onclick="closeWindow('personnelWindow')">✖</span>
+
+</div>
+
+<div class="windowContent">
+
+<p>
+
+Dr. ███████
+
+Status:
+Classified
+
+</p>
+
+</div>
+
+</div>
+
+<div id="cameraWindow" class="window">
+
+<div class="windowTitle">
+
+Security Cameras
+
+<span onclick="closeWindow('cameraWindow')">✖</span>
+
+</div>
+
+<div class="windowContent">
+
+<p>
+
+Camera Feed Offline
+
+</p>
+
+</div>
+
+</div>
+
+<div id="audioWindow" class="window">
+
+<div class="windowTitle">
+
+Audio Logs
+
+<span onclick="closeWindow('audioWindow')">✖</span>
+
+</div>
+
+<div class="windowContent">
+
+<p>
+
+No recordings available.
+
+</p>
+
+</div>
+
+</div>
+
+<script src="js/os.js"></script>
+
+</body>
+
+</html>
