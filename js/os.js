@@ -85,26 +85,38 @@ function terminalEnter(event){
 
         case "sd-001":
 
-            output.innerHTML += `
-            <span style="color:#00FFB3;">
-            CODE VERIFIED
-            </span>
-            <br>
-            ----------------
-            <br>
-            CLASSIFIED FILE SD-001
-            <br><br>
-            ARCHIVE STATUS: UNLOCKED
-            <br>
-            FILE TYPE: RESEARCH DATA
-            <br>
-            SECURITY LEVEL: CLASSIFIED
-            <br><br>
-            [ FILE CONTENT PLACEHOLDER ]
-            <br><br>
-            `;
+    output.innerHTML += `
+    <span style="color:#00FFB3;">
+    CODE VERIFIED
+    </span>
+    <br>
+    ----------------
+    <br>
+    CLASSIFIED FILE SD-001
+    <br><br>
+    ARCHIVE STATUS: UNLOCKED
+    <br>
+    FILE TYPE: RESEARCH DATA
+    <br>
+    SECURITY LEVEL: CLASSIFIED
+    <br><br>
 
-        break;
+    <img 
+        src="assets/images/SD-001.png"
+        alt="SD-001 Classified Research Dossier"
+        style="
+            width:100%;
+            max-width:700px;
+            display:block;
+            margin:20px auto;
+            border:1px solid #00FFB3;
+        "
+    >
+
+    <br>
+    `;
+
+break;
 
 
         case "sd-002":
