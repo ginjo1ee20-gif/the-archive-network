@@ -121,26 +121,56 @@ break;
 
         case "sd-002":
 
-            output.innerHTML += `
-            <span style="color:#00FFB3;">
-            CODE VERIFIED
-            </span>
-            <br>
-            ----------------
-            <br>
-            CLASSIFIED FILE SD-002
-            <br><br>
-            ARCHIVE STATUS: UNLOCKED
-            <br>
-            FILE TYPE: AUDIO LOG
-            <br>
-            SECURITY LEVEL: CLASSIFIED
-            <br><br>
-            [ AUDIO FILE PLACEHOLDER ]
-            <br><br>
-            `;
+    output.innerHTML += `
+    <span style="color:#00FFB3;">
+    CODE VERIFIED
+    </span>
+    <br>
+    ----------------
+    <br>
+    CLASSIFIED FILE SD-002
+    <br><br>
+    ARCHIVE STATUS: UNLOCKED
+    <br>
+    FILE TYPE: AUDIO LOG
+    <br>
+    SECURITY LEVEL: CLASSIFIED
+    <br>
+    AUDIO STATUS: RECOVERED
+    <br><br>
 
-        break;
+    <div style="
+        border:1px solid #00FFB3;
+        padding:15px;
+        margin-top:10px;
+        background:#050505;
+    ">
+
+        <span style="color:#00FFB3;">
+        ▶ SD-002 — RECOVERED AUDIO LOG
+        </span>
+
+        <br><br>
+
+        <audio controls style="width:100%;">
+            <source src="assets/audio/SD-002.mp3" type="audio/mpeg">
+            Your browser does not support the audio player.
+        </audio>
+
+        <br><br>
+
+        <span style="color:#888;">
+        AUDIO INTEGRITY: 73%<br>
+        RECOVERY STATUS: PARTIAL<br>
+        SOURCE IDENTITY: [REDACTED]
+        </span>
+
+    </div>
+
+    <br><br>
+    `;
+
+break;
 
 
         case "sd-003":
