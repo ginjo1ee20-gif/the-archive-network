@@ -393,7 +393,7 @@ function terminalEnter(event){
             <br><br>
 
             "The Archive remembers what
-            the creator forgot."
+            the creator has forgot."
 
             <br><br>
 
@@ -406,6 +406,110 @@ function terminalEnter(event){
         break;
 
 
+        case "creator-1.00.4.6/real":
+
+    output.innerHTML += `
+    <br>
+
+    <div style="
+        border:1px solid #C9A227;
+        padding:25px;
+        margin-top:15px;
+        background:#080706;
+        color:#EAEAEA;
+        line-height:1.8;
+        font-family:'IBM Plex Mono', monospace;
+    ">
+
+        <div style="
+            color:#C9A227;
+            text-align:center;
+            margin-bottom:25px;
+            letter-spacing:2px;
+        ">
+            [ PRIVATE CREATOR MESSAGE ]
+        </div>
+
+        Hey dear genius.
+        <br><br>
+
+        If you're reading this, you actually found it.
+        <br><br>
+
+        This isn't part of the story.
+        <br>
+        It's not another experiment.
+        <br>
+        And it's not some secret character.
+        <br><br>
+
+        It's me. The creator.
+        <br><br>
+
+        I'm the person who created The Sixth Door and built this Archive.
+        <br><br>
+
+        I wanted to leave something here for the people who were curious enough to look deeper and understand everything.
+        <br><br>
+
+        You could've just played the game and left.
+        <br><br>
+
+        But you didn't.
+        <br><br>
+
+        So... thank you very much.
+        <br><br>
+
+        Every hidden file, every strange code, every little detail you found was put here for a reason.
+        <br><br>
+
+        And somehow, you found your way to this one.
+        <br><br>
+
+        And just to make some things clear:
+        <br><br>
+
+        This message is real.
+        <br><br>
+
+        I'm not a character in the story.
+        <br>
+        This isn't part of the lore.
+        <br>
+        And you don't need to look for some hidden meaning in this message.
+        <br><br>
+
+        It's just me.
+        <br><br>
+
+        The actual creator of this project, saying thank you to the people who cared enough to look this far.
+        <br><br>
+
+        There isn't anything else you need to do here.
+        <br><br>
+
+        You found me.
+        <br><br>
+
+        Thank you for playing The Sixth Door.
+        <br><br>
+
+        And thank you for being curious.
+        <br><br>
+
+        <span style="color:#C9A227;">
+            Iyad Mutwakill
+        </span>
+        <br>
+        Creator of Project: The Sixth Door
+
+    </div>
+
+    <br><br>
+    `;
+
+break;
         /* =========================
            UNKNOWN
         ========================= */
