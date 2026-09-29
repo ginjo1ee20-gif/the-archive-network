@@ -1420,3 +1420,526 @@ footer{
     }
 
 }
+
+/* =========================================================
+   PERSONNEL ARCHIVE
+========================================================= */
+
+.personnelArchive{
+
+    width:100%;
+
+    color:#aaa28e;
+
+    font-family:"IBM Plex Mono", monospace;
+
+}
+
+
+.personnelHeader{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:10px;
+
+    padding-bottom:10px;
+
+    border-bottom:1px solid #665a42;
+
+    color:#c5b58b;
+
+    font-size:11px;
+
+    letter-spacing:2px;
+
+}
+
+
+.personnelHeader span{
+
+    color:#756b57;
+
+    font-size:9px;
+
+}
+
+
+.personnelStatus{
+
+    margin:12px 0 18px;
+
+    color:#817a69;
+
+    font-size:9px;
+
+    letter-spacing:1px;
+
+}
+
+
+.personnelRecord{
+
+    margin-bottom:12px;
+
+    padding:14px;
+
+    background:#12110d;
+
+    border:1px solid #4f4633;
+
+}
+
+
+.personnelRecord:hover{
+
+    border-color:#756443;
+
+    background:#171611;
+
+}
+
+
+.personnelRecordHeader{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:10px;
+
+    padding-bottom:9px;
+
+    border-bottom:1px solid #3e382b;
+
+}
+
+
+.personnelRecordHeader strong{
+
+    color:#c5b58b;
+
+    font-size:11px;
+
+}
+
+
+.personnelRecordHeader span{
+
+    font-size:8px;
+
+    letter-spacing:1px;
+
+}
+
+
+.personnelActive{
+
+    color:#9eaf79;
+
+}
+
+
+.personnelRestricted{
+
+    color:#b49a63;
+
+}
+
+
+.personnelTransferred{
+
+    color:#817a69;
+
+}
+
+
+.personnelCorrupt{
+
+    border-color:#574536;
+
+}
+
+
+.personnelCorrupt .personnelRecordHeader strong{
+
+    color:#8c8170;
+
+}
+
+
+.personnelInfo{
+
+    margin-top:12px;
+
+}
+
+
+.personnelInfo p{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:15px;
+
+    margin:6px 0;
+
+    color:#aaa28e;
+
+    font-size:9px;
+
+}
+
+
+.personnelInfo span{
+
+    color:#6f6757;
+
+    font-size:8px;
+
+}
+
+
+.personnelNote{
+
+    margin-top:12px;
+
+    padding-top:10px;
+
+    border-top:1px dashed #3e382b;
+
+    color:#746d5e;
+
+    font-size:9px;
+
+    line-height:1.7;
+
+}
+
+
+.personnelFooter{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    margin-top:15px;
+
+    padding-top:12px;
+
+    border-top:1px solid #4f4633;
+
+    color:#625b4d;
+
+    font-size:8px;
+
+    letter-spacing:1px;
+
+}
+
+
+/* =========================================================
+   SECURITY CAMERA ARCHIVE
+========================================================= */
+
+.cameraArchive{
+
+    width:100%;
+
+    color:#aaa28e;
+
+    font-family:"IBM Plex Mono", monospace;
+
+}
+
+
+.cameraHeader{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:10px;
+
+    padding-bottom:10px;
+
+    border-bottom:1px solid #665a42;
+
+    color:#c5b58b;
+
+    font-size:11px;
+
+    letter-spacing:2px;
+
+}
+
+
+.cameraHeader span{
+
+    color:#756b57;
+
+    font-size:9px;
+
+}
+
+
+.cameraStatus{
+
+    margin:12px 0 18px;
+
+    color:#817a69;
+
+    font-size:9px;
+
+    letter-spacing:1px;
+
+}
+
+
+.cameraStatus strong{
+
+    color:#b49a63;
+
+    font-weight:normal;
+
+}
+
+
+.cameraRecord{
+
+    margin-bottom:12px;
+
+    padding:14px;
+
+    background:#12110d;
+
+    border:1px solid #4f4633;
+
+}
+
+
+.cameraRecord:hover{
+
+    border-color:#756443;
+
+    background:#171611;
+
+}
+
+
+.cameraTop{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:10px;
+
+    padding-bottom:9px;
+
+    border-bottom:1px solid #3e382b;
+
+}
+
+
+.cameraTop strong{
+
+    color:#c5b58b;
+
+    font-size:11px;
+
+}
+
+
+.cameraTop span{
+
+    font-size:8px;
+
+    letter-spacing:1px;
+
+}
+
+
+.cameraOnline{
+
+    color:#9eaf79;
+
+}
+
+
+.cameraWarning{
+
+    color:#b49a63;
+
+}
+
+
+.cameraOffline{
+
+    color:#806f61;
+
+}
+
+
+.cameraRestrictedStatus{
+
+    color:#8b5d5d;
+
+}
+
+
+.cameraInfo{
+
+    margin-top:12px;
+
+}
+
+
+.cameraInfo p{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:15px;
+
+    margin:6px 0;
+
+    color:#aaa28e;
+
+    font-size:9px;
+
+}
+
+
+.cameraInfo span{
+
+    color:#6f6757;
+
+    font-size:8px;
+
+}
+
+
+.cameraFeed{
+
+    margin-top:14px;
+
+    padding:15px 10px;
+
+    min-height:65px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    border:1px solid #3e382b;
+
+    background:#090908;
+
+    color:#716a5a;
+
+    font-size:8px;
+
+    line-height:1.8;
+
+    letter-spacing:1px;
+
+}
+
+
+.cameraStatic{
+
+    color:#9a8860;
+
+    background:
+
+        repeating-linear-gradient(
+            0deg,
+            #090908 0px,
+            #090908 3px,
+            #15130f 4px
+        );
+
+}
+
+
+.cameraRestricted{
+
+    border-color:#503c36;
+
+}
+
+
+.cameraRestrictedFeed{
+
+    color:#805b52;
+
+    border-color:#503c36;
+
+}
+
+
+.cameraFooter{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:10px;
+
+    margin-top:15px;
+
+    padding-top:12px;
+
+    border-top:1px solid #4f4633;
+
+    color:#625b4d;
+
+    font-size:8px;
+
+    letter-spacing:1px;
+
+}
+
+
+/* =========================================================
+   PERSONNEL + CAMERA MOBILE
+========================================================= */
+
+@media(max-width:700px){
+
+    .personnelHeader,
+    .cameraHeader{
+
+        flex-direction:column;
+
+    }
+
+
+    .personnelInfo p,
+    .cameraInfo p{
+
+        flex-direction:column;
+
+        gap:3px;
+
+    }
+
+
+    .personnelFooter,
+    .cameraFooter{
+
+        flex-direction:column;
+
+    }
+
+}
