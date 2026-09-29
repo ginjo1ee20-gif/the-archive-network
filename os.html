@@ -11,15 +11,47 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="css/style.css">
 
 </head>
 
+
 <body class="osBody">
 
-<div class="desktop">
+
+<!-- =====================================================
+     BOOT SCREEN
+===================================================== -->
+
+<div id="bootScreen">
+
+    <div class="bootText">
+
+        <h1>THE ARCHIVE NETWORK</h1>
+
+        <p>CENTRAL RECORDING SYSTEM</p>
+
+        <br>
+
+        <div id="bootLines"></div>
+
+        <br>
+
+        <span id="bootCursor" class="bootCursor"></span>
+
+    </div>
+
+</div>
+
+
+<!-- =====================================================
+     DESKTOP
+===================================================== -->
+
+<div class="desktop" id="mainDesktop">
+
 
 <div class="topBar">
 
@@ -33,13 +65,19 @@
 
 </div>
 
-<div class="icon" ondblclick="openWindow('terminalWindow')">
 
-💻
+<!-- TERMINAL -->
 
-<p>Terminal</p>
+<div
+class="icon"
+ondblclick="openWindow('terminalWindow')">
+
+    ▣
+
+    <p>Terminal</p>
 
 </div>
+
 
 <div id="terminalWindow" class="window">
 
@@ -51,62 +89,84 @@
 
     </div>
 
+
     <div class="windowContent">
 
         <div id="terminalOutput">
 
             <p>ARCHIVE TERMINAL v1.0</p>
+
             <p>Type HELP to begin.</p>
 
         </div>
 
-        <br>
 
         <input
         id="terminalInput"
         type="text"
-        placeholder="Enter Command..."
+        placeholder="ENTER COMMAND..."
         onkeydown="terminalEnter(event)">
 
     </div>
 
 </div>
 
+
+<!-- DESKTOP ICONS -->
+
 <div class="desktopIcons">
 
-<div class="icon" ondblclick="openWindow('researchWindow')">
 
-📁
+<div
+class="icon"
+ondblclick="openWindow('researchWindow')">
 
-<p>Research Files</p>
+    ▤
 
-</div>
-
-<div class="icon" ondblclick="openWindow('personnelWindow')">
-
-👤
-
-<p>Personnel</p>
+    <p>Research Files</p>
 
 </div>
 
-<div class="icon" ondblclick="openWindow('cameraWindow')">
 
-📹
+<div
+class="icon"
+ondblclick="openWindow('personnelWindow')">
 
-<p>Cameras</p>
+    ◉
 
-</div>
-
-<div class="icon" ondblclick="openWindow('audioWindow')">
-
-🎧
-
-<p>Audio Logs</p>
+    <p>Personnel</p>
 
 </div>
 
+
+<div
+class="icon"
+ondblclick="openWindow('cameraWindow')">
+
+    ▣
+
+    <p>Cameras</p>
+
 </div>
+
+
+<div
+class="icon"
+ondblclick="openWindow('audioWindow')">
+
+    ♪
+
+    <p>Audio Logs</p>
+
+</div>
+
+
+</div>
+
+
+<!-- =====================================================
+     RESEARCH WINDOW
+===================================================== -->
 
 <div id="researchWindow" class="window">
 
@@ -134,6 +194,11 @@ Further information remains classified.
 
 </div>
 
+
+<!-- =====================================================
+     PERSONNEL WINDOW
+===================================================== -->
+
 <div id="personnelWindow" class="window">
 
 <div class="windowTitle">
@@ -150,14 +215,20 @@ Personnel
 
 Dr. ███████
 
-Status:
-Classified
+<br><br>
+
+Status: Classified
 
 </p>
 
 </div>
 
 </div>
+
+
+<!-- =====================================================
+     CAMERA WINDOW
+===================================================== -->
 
 <div id="cameraWindow" class="window">
 
@@ -173,6 +244,10 @@ Security Cameras
 
 <p>
 
+CAMERA NETWORK
+
+<br><br>
+
 Camera Feed Offline
 
 </p>
@@ -180,6 +255,11 @@ Camera Feed Offline
 </div>
 
 </div>
+
+
+<!-- =====================================================
+     AUDIO WINDOW
+===================================================== -->
 
 <div id="audioWindow" class="window">
 
@@ -195,13 +275,20 @@ Audio Logs
 
 <p>
 
-No recordings available.
+Recovered audio files may be accessed through the Archive Terminal.
 
+</p>
+
+<br>
+
+<p>
+STATUS: ARCHIVE STORAGE ONLINE
 </p>
 
 </div>
 
 </div>
+
 
 <script src="js/os.js"></script>
 
