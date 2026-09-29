@@ -240,7 +240,9 @@ footer{
 }
 
 @keyframes cursorBlink{
-    50%{opacity:0;}
+    50%{
+        opacity:0;
+    }
 }
 
 /* =========================================================
@@ -396,10 +398,7 @@ footer{
 
 /* =========================================================
    WINDOWS
-========================================================= */
-
-/* =========================================================
-   WINDOWS — SCROLLABLE ARCHIVE PANELS
+   SCROLLABLE ARCHIVE PANELS
 ========================================================= */
 
 .window{
@@ -414,6 +413,7 @@ footer{
     width:500px;
     min-width:300px;
 
+    height:75vh;
     max-height:75vh;
 
     background:#191812;
@@ -431,13 +431,15 @@ footer{
 }
 
 
-/* WINDOW TITLE BAR */
+/* =========================================================
+   WINDOW TITLE BAR
+========================================================= */
 
 .windowTitle{
 
     height:38px;
 
-    flex-shrink:0;
+    min-height:38px;
 
     background:#29261c;
 
@@ -461,7 +463,6 @@ footer{
 
 }
 
-
 .windowTitle span{
 
     cursor:pointer;
@@ -470,7 +471,6 @@ footer{
 
 }
 
-
 .windowTitle span:hover{
 
     color:#d5bd7d;
@@ -478,9 +478,13 @@ footer{
 }
 
 
-/* SCROLLABLE CONTENT */
+/* =========================================================
+   SCROLLABLE WINDOW CONTENT
+========================================================= */
 
 .windowContent{
+
+    height:calc(75vh - 43px);
 
     max-height:calc(75vh - 43px);
 
@@ -501,43 +505,43 @@ footer{
 }
 
 
-/* CHROME / EDGE / WINDOWS SCROLLBAR */
+/* =========================================================
+   WINDOW SCROLLBAR
+========================================================= */
 
 .windowContent::-webkit-scrollbar{
-
     width:10px;
-
 }
-
 
 .windowContent::-webkit-scrollbar-track{
-
     background:#0d0d0b;
-
     border-left:1px solid #3e382b;
-
 }
-
 
 .windowContent::-webkit-scrollbar-thumb{
-
     background:#756443;
-
     border:2px solid #0d0d0b;
-
 }
-
 
 .windowContent::-webkit-scrollbar-thumb:hover{
-
     background:#b49a63;
-
 }
 
-
 .windowContent h2{
-
     color:#c5b58b;
+}
+
+@keyframes windowOpen{
+
+    from{
+        opacity:0;
+        transform:scale(.97);
+    }
+
+    to{
+        opacity:1;
+        transform:scale(1);
+    }
 
 }
 
@@ -546,24 +550,53 @@ footer{
 ========================================================= */
 
 #terminalOutput{
+
     height:260px;
+
     overflow-y:auto;
+
     background:#0b0b09;
+
     padding:15px;
+
     border:1px solid #5d5138;
+
     color:#aeb08d;
+
     font-family:"IBM Plex Mono", monospace;
+
     line-height:1.6;
+
+}
+
+#terminalOutput::-webkit-scrollbar{
+    width:8px;
+}
+
+#terminalOutput::-webkit-scrollbar-track{
+    background:#080807;
+}
+
+#terminalOutput::-webkit-scrollbar-thumb{
+    background:#62573f;
 }
 
 #terminalInput{
+
     width:100%;
+
     margin-top:15px;
+
     background:#0b0b09;
+
     color:#bfc49b;
+
     border:1px solid #5d5138;
+
     padding:10px;
+
     font-family:"IBM Plex Mono", monospace;
+
 }
 
 #terminalInput:focus{
@@ -575,37 +608,65 @@ footer{
 ========================================================= */
 
 .archivePlayer{
+
+    display:none;
+
     border:3px double #756443;
+
     background:#11110d;
+
     padding:18px;
+
     margin-top:12px;
+
 }
 
 .playerHeader{
+
     color:#c5b58b;
+
     border-bottom:1px solid #5f543d;
+
     padding-bottom:10px;
+
     margin-bottom:15px;
+
 }
 
 .recorderDisplay{
+
     height:70px;
+
     border:1px solid #554a35;
+
     background:#080806;
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     overflow:hidden;
+
     margin-bottom:15px;
+
 }
 
 .reel{
+
     width:45px;
+
     height:45px;
+
     border:3px dashed #82724f;
+
     border-radius:50%;
+
     animation:reelSpin 2s linear infinite;
+
     animation-play-state:paused;
+
 }
 
 .archivePlayer.playing .reel{
@@ -613,178 +674,175 @@ footer{
 }
 
 @keyframes reelSpin{
-    to{transform:rotate(360deg);}
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+
 }
 
 .waveform{
+
     display:flex;
+
     align-items:center;
+
     justify-content:center;
+
     gap:4px;
+
     margin:15px 0;
+
     height:45px;
+
 }
 
 .waveform span{
+
     width:3px;
+
     height:15px;
+
     background:#81704d;
+
     animation:wave .8s infinite alternate;
+
     animation-play-state:paused;
+
 }
 
 .archivePlayer.playing .waveform span{
     animation-play-state:running;
 }
 
-.waveform span:nth-child(2){animation-delay:.1s}
-.waveform span:nth-child(3){animation-delay:.2s}
-.waveform span:nth-child(4){animation-delay:.3s}
-.waveform span:nth-child(5){animation-delay:.15s}
-.waveform span:nth-child(6){animation-delay:.25s}
-.waveform span:nth-child(7){animation-delay:.05s}
+.waveform span:nth-child(2){
+    animation-delay:.1s;
+}
+
+.waveform span:nth-child(3){
+    animation-delay:.2s;
+}
+
+.waveform span:nth-child(4){
+    animation-delay:.3s;
+}
+
+.waveform span:nth-child(5){
+    animation-delay:.15s;
+}
+
+.waveform span:nth-child(6){
+    animation-delay:.25s;
+}
+
+.waveform span:nth-child(7){
+    animation-delay:.05s;
+}
 
 @keyframes wave{
-    from{height:8px}
-    to{height:35px}
+
+    from{
+        height:8px;
+    }
+
+    to{
+        height:35px;
+    }
+
 }
 
 .playerTime{
+
     display:flex;
+
     justify-content:space-between;
+
     color:#8f8877;
+
     font-size:12px;
+
 }
 
 .playerProgress{
+
     width:100%;
+
     height:8px;
+
     margin:10px 0;
+
     appearance:none;
+
     background:#29261d;
+
     border:1px solid #554a35;
+
 }
 
 .playerProgress::-webkit-slider-thumb{
+
     appearance:none;
+
     width:12px;
+
     height:12px;
+
     background:#b49a63;
+
     cursor:pointer;
+
 }
 
 .playerControls{
+
     display:flex;
+
     gap:8px;
+
     flex-wrap:wrap;
+
 }
 
 .archivePlayer button{
+
     padding:8px 14px;
+
     font-size:12px;
+
 }
 
 .playerStatus{
+
     margin-top:12px;
+
     color:#817b6c;
+
     font-size:11px;
+
 }
+
 
 /* =========================================================
-   MEDIA
+   AUDIO LOG ARCHIVE
 ========================================================= */
-
-.gallery{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-    margin-top:20px;
-}
-
-.mediaCard{
-    border:1px solid #665a42;
-    padding:15px;
-    text-align:center;
-    background:#191812;
-}
-
-.mediaCard img{
-    width:100%;
-    height:180px;
-    object-fit:cover;
-    border:1px solid #665a42;
-    margin-bottom:15px;
-}
-
-.mediaCard p{
-    color:#aaa28e;
-    font-size:15px;
-}
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media(max-width:700px){
-
-    header h1{
-        font-size:20px;
-    }
-
-    nav{
-        flex-direction:column;
-        align-items:center;
-    }
-
-    .hero{
-        padding:25px;
-        margin-top:30px;
-    }
-
-    .desktopIcons{
-        padding:20px;
-        gap:10px;
-    }
-
-    .desktop > .icon{
-        margin:20px 0 0 20px;
-    }
-
-    .window{
-        left:5%;
-        top:90px;
-        width:90%;
-        min-width:0;
-    }
-
-    .topBar{
-        font-size:11px;
-    }
-
-    .verificationBox{
-        padding:20px;
-    }
-}
-
-/* ==========================
-   AUDIO ARCHIVE
-========================== */
 
 .audioArchive{
-
     width:100%;
-
 }
 
 .audioArchiveHeader{
 
-    color:#C9A227;
+    color:#c5b58b;
 
-    font-size:20px;
+    font-size:18px;
 
     letter-spacing:3px;
 
-    border-bottom:1px solid #C9A227;
+    border-bottom:1px solid #756443;
 
     padding-bottom:10px;
 
@@ -792,9 +850,9 @@ footer{
 
 .audioArchiveStatus{
 
-    color:#777;
+    color:#817a69;
 
-    font-size:12px;
+    font-size:10px;
 
     margin-top:8px;
 
@@ -822,9 +880,9 @@ footer{
 
 .audioLog:hover{
 
-    border-color:#C9A227;
+    border-color:#756443;
 
-    background:#11100d;
+    background:#15130f;
 
 }
 
@@ -840,25 +898,25 @@ footer{
 
 .audioLogInfo strong{
 
-    color:#C9A227;
+    color:#c5b58b;
 
-    font-size:16px;
+    font-size:14px;
 
 }
 
 .audioLogInfo span{
 
-    color:#EAEAEA;
+    color:#aaa28e;
 
-    font-size:13px;
+    font-size:11px;
 
 }
 
 .audioLogInfo small{
 
-    color:#777;
+    color:#6f6757;
 
-    font-size:11px;
+    font-size:9px;
 
 }
 
@@ -866,31 +924,17 @@ footer{
 
     padding:8px 12px;
 
-    font-size:11px;
+    font-size:10px;
 
     white-space:nowrap;
 
 }
 
-.archivePlayer{
-
-    display:none;
-
-    margin-top:25px;
-
-    padding:20px;
-
-    border:2px solid #C9A227;
-
-    background:#050403;
-
-}
-
 #audioPlayerTitle{
 
-    color:#C9A227;
+    color:#c5b58b;
 
-    font-size:16px;
+    font-size:15px;
 
     letter-spacing:2px;
 
@@ -898,9 +942,9 @@ footer{
 
 #audioPlayerStatus{
 
-    color:#777;
+    color:#817a69;
 
-    font-size:11px;
+    font-size:10px;
 
     margin-top:6px;
 
@@ -920,21 +964,23 @@ footer{
 
 }
 
-.reel{
+.reelArea .reel{
 
     width:55px;
 
     height:55px;
 
-    border:3px solid #777;
+    border:3px solid #77705f;
 
     border-radius:50%;
 
     position:relative;
 
+    animation:none;
+
 }
 
-.reel::before{
+.reelArea .reel::before{
 
     content:"";
 
@@ -944,7 +990,7 @@ footer{
 
     height:15px;
 
-    border:2px solid #777;
+    border:2px solid #77705f;
 
     border-radius:50%;
 
@@ -954,89 +1000,77 @@ footer{
 
 }
 
-.waveform{
-
-    color:#C9A227;
-
-    letter-spacing:2px;
-
-    font-size:18px;
-
-}
-
-.playerControls{
-
-    display:flex;
-
-    gap:10px;
-
-    justify-content:center;
-
-}
-
-.playerControls button{
-
-    font-size:11px;
-
-    padding:8px 15px;
-
-}
-
-
-/* Reel animation */
-
-.reel.spinning{
+.reelArea .reel.spinning{
 
     animation:reelSpin 1s linear infinite;
 
 }
 
-@keyframes reelSpin{
+.reelArea .waveform{
 
-    from{
+    display:block;
 
-        transform:rotate(0deg);
+    height:auto;
 
-    }
+    margin:0;
 
-    to{
+    color:#b49a63;
 
-        transform:rotate(360deg);
+    letter-spacing:2px;
 
-    }
+    font-size:16px;
 
 }
 
 
-/* Mobile */
+/* =========================================================
+   MEDIA
+========================================================= */
 
-@media(max-width:700px){
+.gallery{
 
-    .audioLog{
+    display:grid;
 
-        flex-direction:column;
+    grid-template-columns:
+        repeat(auto-fit,minmax(250px,1fr));
 
-        align-items:flex-start;
+    gap:25px;
 
-    }
+    margin-top:20px;
 
-    .audioLog button{
+}
 
-        width:100%;
+.mediaCard{
 
-    }
+    border:1px solid #665a42;
 
-    .reelArea{
+    padding:15px;
 
-        gap:10px;
+    text-align:center;
 
-    }
+    background:#191812;
 
-    .waveform{
+}
 
-        font-size:12px;
+.mediaCard img{
 
-    }
+    width:100%;
+
+    height:180px;
+
+    object-fit:cover;
+
+    border:1px solid #665a42;
+
+    margin-bottom:15px;
+
+}
+
+.mediaCard p{
+
+    color:#aaa28e;
+
+    font-size:15px;
 
 }
 
@@ -1076,9 +1110,6 @@ footer{
 
 }
 
-
-/* OLD ARCHIVE PAPER / SCAN EFFECT */
-
 .sd001Document::before{
 
     content:"";
@@ -1099,9 +1130,6 @@ footer{
 
 }
 
-
-/* TOP LINE */
-
 .sd001TopLine{
 
     position:relative;
@@ -1121,9 +1149,6 @@ footer{
     letter-spacing:2px;
 
 }
-
-
-/* CLASSIFIED STAMP */
 
 .sd001Classification{
 
@@ -1149,9 +1174,6 @@ footer{
 
 }
 
-
-/* DOCUMENT HEADER */
-
 .sd001Header{
 
     position:relative;
@@ -1161,7 +1183,6 @@ footer{
     padding:25px 0 20px;
 
 }
-
 
 .sd001SmallTitle{
 
@@ -1174,7 +1195,6 @@ footer{
     margin-bottom:10px;
 
 }
-
 
 .sd001Header h2{
 
@@ -1190,7 +1210,6 @@ footer{
 
 }
 
-
 .sd001DocumentTitle{
 
     margin-top:10px;
@@ -1202,9 +1221,6 @@ footer{
     letter-spacing:2px;
 
 }
-
-
-/* METADATA */
 
 .sd001Meta{
 
@@ -1228,7 +1244,6 @@ footer{
 
 }
 
-
 .sd001Meta div{
 
     display:flex;
@@ -1239,7 +1254,6 @@ footer{
 
 }
 
-
 .sd001Meta span{
 
     color:#716852;
@@ -1249,7 +1263,6 @@ footer{
     letter-spacing:1px;
 
 }
-
 
 .sd001Divider{
 
@@ -1263,9 +1276,6 @@ footer{
 
 }
 
-
-/* SECTIONS */
-
 .sd001Section{
 
     position:relative;
@@ -1273,7 +1283,6 @@ footer{
     margin-bottom:22px;
 
 }
-
 
 .sd001SectionTitle{
 
@@ -1287,7 +1296,6 @@ footer{
 
 }
 
-
 .sd001Section p{
 
     margin:7px 0;
@@ -1299,9 +1307,6 @@ footer{
     line-height:1.8;
 
 }
-
-
-/* INTERNAL NOTE */
 
 .sd001Internal{
 
@@ -1317,7 +1322,6 @@ footer{
 
 }
 
-
 .sd001Internal p{
 
     margin:7px 0;
@@ -1329,9 +1333,6 @@ footer{
     line-height:1.8;
 
 }
-
-
-/* REDACTED SECTION */
 
 .sd001Redacted{
 
@@ -1346,7 +1347,6 @@ footer{
     background:#100f0c;
 
 }
-
 
 .sd001BlackLine{
 
@@ -1366,7 +1366,6 @@ footer{
 
 }
 
-
 .sd001RedactedText{
 
     margin-top:12px;
@@ -1378,9 +1377,6 @@ footer{
     letter-spacing:1px;
 
 }
-
-
-/* DAMAGED DOCUMENT */
 
 .sd001Damaged{
 
@@ -1394,7 +1390,6 @@ footer{
 
 }
 
-
 .sd001Damaged p{
 
     color:#817a6a;
@@ -1404,7 +1399,6 @@ footer{
     line-height:1.7;
 
 }
-
 
 .sd001Missing{
 
@@ -1421,9 +1415,6 @@ footer{
     line-height:2;
 
 }
-
-
-/* DOCUMENT FOOTER */
 
 .sd001Footer{
 
@@ -1449,7 +1440,6 @@ footer{
 
 }
 
-
 .sd001FooterWarning{
 
     position:relative;
@@ -1466,45 +1456,6 @@ footer{
 
 }
 
-
-/* MOBILE */
-
-@media(max-width:700px){
-
-    .sd001Document{
-
-        padding:15px;
-
-    }
-
-    .sd001TopLine{
-
-        flex-direction:column;
-
-        gap:7px;
-
-    }
-
-    .sd001Header h2{
-
-        font-size:14px;
-
-    }
-
-    .sd001Meta{
-
-        grid-template-columns:1fr;
-
-    }
-
-    .sd001Footer{
-
-        flex-direction:column;
-
-    }
-
-}
-
 /* =========================================================
    PERSONNEL ARCHIVE
 ========================================================= */
@@ -1518,7 +1469,6 @@ footer{
     font-family:"IBM Plex Mono", monospace;
 
 }
-
 
 .personnelHeader{
 
@@ -1540,7 +1490,6 @@ footer{
 
 }
 
-
 .personnelHeader span{
 
     color:#756b57;
@@ -1548,7 +1497,6 @@ footer{
     font-size:9px;
 
 }
-
 
 .personnelStatus{
 
@@ -1562,7 +1510,6 @@ footer{
 
 }
 
-
 .personnelRecord{
 
     margin-bottom:12px;
@@ -1575,7 +1522,6 @@ footer{
 
 }
 
-
 .personnelRecord:hover{
 
     border-color:#756443;
@@ -1583,7 +1529,6 @@ footer{
     background:#171611;
 
 }
-
 
 .personnelRecordHeader{
 
@@ -1599,7 +1544,6 @@ footer{
 
 }
 
-
 .personnelRecordHeader strong{
 
     color:#c5b58b;
@@ -1607,7 +1551,6 @@ footer{
     font-size:11px;
 
 }
-
 
 .personnelRecordHeader span{
 
@@ -1617,48 +1560,29 @@ footer{
 
 }
 
-
 .personnelActive{
-
     color:#9eaf79;
-
 }
-
 
 .personnelRestricted{
-
     color:#b49a63;
-
 }
-
 
 .personnelTransferred{
-
     color:#817a69;
-
 }
-
 
 .personnelCorrupt{
-
     border-color:#574536;
-
 }
-
 
 .personnelCorrupt .personnelRecordHeader strong{
-
     color:#8c8170;
-
 }
-
 
 .personnelInfo{
-
     margin-top:12px;
-
 }
-
 
 .personnelInfo p{
 
@@ -1676,7 +1600,6 @@ footer{
 
 }
 
-
 .personnelInfo span{
 
     color:#6f6757;
@@ -1684,7 +1607,6 @@ footer{
     font-size:8px;
 
 }
-
 
 .personnelNote{
 
@@ -1701,7 +1623,6 @@ footer{
     line-height:1.7;
 
 }
-
 
 .personnelFooter{
 
@@ -1723,7 +1644,6 @@ footer{
 
 }
 
-
 /* =========================================================
    SECURITY CAMERA ARCHIVE
 ========================================================= */
@@ -1737,7 +1657,6 @@ footer{
     font-family:"IBM Plex Mono", monospace;
 
 }
-
 
 .cameraHeader{
 
@@ -1759,7 +1678,6 @@ footer{
 
 }
 
-
 .cameraHeader span{
 
     color:#756b57;
@@ -1767,7 +1685,6 @@ footer{
     font-size:9px;
 
 }
-
 
 .cameraStatus{
 
@@ -1781,7 +1698,6 @@ footer{
 
 }
 
-
 .cameraStatus strong{
 
     color:#b49a63;
@@ -1789,7 +1705,6 @@ footer{
     font-weight:normal;
 
 }
-
 
 .cameraRecord{
 
@@ -1803,7 +1718,6 @@ footer{
 
 }
 
-
 .cameraRecord:hover{
 
     border-color:#756443;
@@ -1811,7 +1725,6 @@ footer{
     background:#171611;
 
 }
-
 
 .cameraTop{
 
@@ -1827,7 +1740,6 @@ footer{
 
 }
 
-
 .cameraTop strong{
 
     color:#c5b58b;
@@ -1835,7 +1747,6 @@ footer{
     font-size:11px;
 
 }
-
 
 .cameraTop span{
 
@@ -1845,41 +1756,25 @@ footer{
 
 }
 
-
 .cameraOnline{
-
     color:#9eaf79;
-
 }
-
 
 .cameraWarning{
-
     color:#b49a63;
-
 }
-
 
 .cameraOffline{
-
     color:#806f61;
-
 }
-
 
 .cameraRestrictedStatus{
-
     color:#8b5d5d;
-
 }
-
 
 .cameraInfo{
-
     margin-top:12px;
-
 }
-
 
 .cameraInfo p{
 
@@ -1897,7 +1792,6 @@ footer{
 
 }
 
-
 .cameraInfo span{
 
     color:#6f6757;
@@ -1905,7 +1799,6 @@ footer{
     font-size:8px;
 
 }
-
 
 .cameraFeed{
 
@@ -1939,13 +1832,11 @@ footer{
 
 }
 
-
 .cameraStatic{
 
     color:#9a8860;
 
     background:
-
         repeating-linear-gradient(
             0deg,
             #090908 0px,
@@ -1955,13 +1846,11 @@ footer{
 
 }
 
-
 .cameraRestricted{
 
     border-color:#503c36;
 
 }
-
 
 .cameraRestrictedFeed{
 
@@ -1970,7 +1859,6 @@ footer{
     border-color:#503c36;
 
 }
-
 
 .cameraFooter{
 
@@ -1994,22 +1882,187 @@ footer{
 
 }
 
-
 /* =========================================================
-   PERSONNEL + CAMERA MOBILE
+   MOBILE
 ========================================================= */
 
 @media(max-width:700px){
 
-    .personnelHeader,
-    .cameraHeader{
+    header h1{
+        font-size:20px;
+    }
+
+    nav{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .hero{
+        padding:25px;
+        margin-top:30px;
+    }
+
+    .desktopIcons{
+        padding:20px;
+        gap:10px;
+    }
+
+    .desktop > .icon{
+        margin:20px 0 0 20px;
+    }
+
+
+    /* WINDOWS */
+
+    .window{
+
+        left:5%;
+
+        top:90px;
+
+        width:90%;
+
+        min-width:0;
+
+        height:80vh;
+
+        max-height:80vh;
+
+    }
+
+    .windowContent{
+
+        height:calc(80vh - 43px);
+
+        max-height:calc(80vh - 43px);
+
+    }
+
+
+    .topBar{
+        font-size:11px;
+    }
+
+    .verificationBox{
+        padding:20px;
+    }
+
+
+    /* AUDIO LOGS */
+
+    .audioLog{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .audioLog button{
+
+        width:100%;
+
+    }
+
+    .reelArea{
+
+        gap:10px;
+
+    }
+
+    .reelArea .reel{
+
+        width:45px;
+
+        height:45px;
+
+    }
+
+    .reelArea .reel::before{
+
+        width:12px;
+
+        height:12px;
+
+        top:13px;
+
+        left:13px;
+
+    }
+
+    .reelArea .waveform{
+
+        font-size:11px;
+
+    }
+
+
+    /* SD-001 */
+
+    .sd001Document{
+
+        padding:15px;
+
+    }
+
+    .sd001TopLine{
+
+        flex-direction:column;
+
+        gap:7px;
+
+    }
+
+    .sd001Header h2{
+
+        font-size:14px;
+
+    }
+
+    .sd001Meta{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .sd001Footer{
 
         flex-direction:column;
 
     }
 
 
-    .personnelInfo p,
+    /* PERSONNEL */
+
+    .personnelHeader{
+
+        flex-direction:column;
+
+    }
+
+    .personnelInfo p{
+
+        flex-direction:column;
+
+        gap:3px;
+
+    }
+
+    .personnelFooter{
+
+        flex-direction:column;
+
+    }
+
+
+    /* CAMERAS */
+
+    .cameraHeader{
+
+        flex-direction:column;
+
+    }
+
     .cameraInfo p{
 
         flex-direction:column;
@@ -2018,8 +2071,6 @@ footer{
 
     }
 
-
-    .personnelFooter,
     .cameraFooter{
 
         flex-direction:column;
