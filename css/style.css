@@ -2078,3 +2078,82 @@ footer{
     }
 
 }
+
+/* =========================================================
+   SD-002 AUDIO FILE
+========================================================= */
+
+.sd002File{
+    border:1px solid #756443;
+    padding:18px;
+    margin-top:15px;
+    background:#11110e;
+    color:#aaa28e;
+}
+
+.sd002Header{
+    color:#c5b58b;
+    font-weight:bold;
+    letter-spacing:2px;
+    border-bottom:1px solid #756443;
+    padding-bottom:10px;
+    margin-bottom:15px;
+}
+
+.sd002Meta{
+    line-height:1.8;
+    font-size:13px;
+}
+
+.sd002Player{
+    border:2px double #756443;
+    padding:15px;
+    background:#191812;
+}
+
+.sd002Title{
+    color:#c5b58b;
+    font-weight:bold;
+    letter-spacing:1px;
+    margin-bottom:10px;
+}
+
+.sd002Status{
+    color:#00a878;
+    font-size:12px;
+    margin-bottom:15px;
+}
+
+.sd002Controls{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+}
+
+.sd002Controls button{
+    background:#29261c;
+    color:#c5b58b;
+    border:1px solid #756443;
+    padding:8px 14px;
+    font-family:"IBM Plex Mono", monospace;
+    cursor:pointer;
+}
+
+.sd002Controls button:hover{
+    background:#3a3527;
+}
+
+.sd002Time{
+    margin-top:12px;
+    font-size:12px;
+    color:#77715f;
+}
+
+.sd002Warning{
+    margin-top:15px;
+    padding:12px;
+    border-left:3px solid #756443;
+    color:#77715f;
+    font-size:11px;
+    line-height:1.7;
+}

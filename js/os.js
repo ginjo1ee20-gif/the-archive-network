@@ -86,6 +86,7 @@ function terminalEnter(event){
 
     if(cmd === "") return;
 
+
     output.innerHTML +=
         "<br><span>&gt; " + cmd + "</span><br>";
 
@@ -93,21 +94,21 @@ function terminalEnter(event){
     switch(cmd){
 
 
-        /* =========================
+        /* =================================================
            NORMAL COMMANDS
-        ========================= */
+        ================================================= */
 
         case "help":
 
             output.innerHTML += `
-            Commands Available<br>
-            ----------------<br>
-            HELP<br>
-            CLEAR<br>
-            FILES<br>
-            LOG-001<br>
-            CREATOR
-            <br><br>
+                Commands Available<br>
+                ----------------<br>
+                HELP<br>
+                CLEAR<br>
+                FILES<br>
+                LOG-001<br>
+                CREATOR
+                <br><br>
             `;
 
         break;
@@ -123,11 +124,11 @@ function terminalEnter(event){
         case "files":
 
             output.innerHTML += `
-            Research Files Found<br>
-            FILE-001<br>
-            FILE-002<br>
-            FILE-003
-            <br><br>
+                Research Files Found<br>
+                FILE-001<br>
+                FILE-002<br>
+                FILE-003
+                <br><br>
             `;
 
         break;
@@ -136,10 +137,10 @@ function terminalEnter(event){
         case "log-001":
 
             output.innerHTML += `
-            Recovered File...<br>
-            Experiment Log 001<br>
-            Status : Stable
-            <br><br>
+                Recovered File...<br>
+                Experiment Log 001<br>
+                Status : Stable
+                <br><br>
             `;
 
         break;
@@ -148,601 +149,792 @@ function terminalEnter(event){
         case "creator":
 
             output.innerHTML += `
-            Searching...
-            <br><br>
-            ACCESS DENIED
-            <br>
-            Creator record deleted.
-            <br><br>
+                Searching...
+                <br><br>
+                ACCESS DENIED
+                <br>
+                Creator record deleted.
+                <br><br>
             `;
 
         break;
 
 
-        /* =========================
-   SD-001
-========================= */
+        /* =================================================
+           SD-001
+        ================================================= */
 
-case "sd-001":
+        case "sd-001":
 
-    output.innerHTML += `
+            output.innerHTML += `
 
-        <span class="green">
-        CODE VERIFIED
-        </span>
-
-        <br>
-        ----------------
-        <br><br>
-
-        <div class="sd001Document">
-
-            <!-- DOCUMENT HEADER -->
-
-            <div class="sd001TopLine">
-
-                <span>
-                    ARCHIVE RESEARCH DIVISION
+                <span class="green">
+                CODE VERIFIED
                 </span>
 
-                <span>
-                    SD-001
-                </span>
+                <br>
+                ----------------
+                <br><br>
 
-            </div>
-
-
-            <div class="sd001Classification">
-
-                CLASSIFIED
-
-            </div>
+                <div class="sd001Document">
 
 
-            <!-- TITLE -->
+                    <div class="sd001TopLine">
 
-            <div class="sd001Header">
+                        <span>
+                            ARCHIVE RESEARCH DIVISION
+                        </span>
 
-                <div class="sd001SmallTitle">
-                    CENTRAL RESEARCH ARCHIVE
+                        <span>
+                            SD-001
+                        </span>
+
+                    </div>
+
+
+                    <div class="sd001Classification">
+
+                        CLASSIFIED
+
+                    </div>
+
+
+                    <div class="sd001Header">
+
+                        <div class="sd001SmallTitle">
+                            CENTRAL RESEARCH ARCHIVE
+                        </div>
+
+                        <h2>
+                            THE SIXTH DOOR PROJECT
+                        </h2>
+
+                        <div class="sd001DocumentTitle">
+                            RESEARCH DOCUMENT — SD-001
+                        </div>
+
+                    </div>
+
+
+                    <div class="sd001Meta">
+
+                        <div>
+                            <span>DOCUMENT ID</span>
+                            SD-001
+                        </div>
+
+                        <div>
+                            <span>PROJECT</span>
+                            THE SIXTH DOOR
+                        </div>
+
+                        <div>
+                            <span>SECURITY</span>
+                            CLASSIFIED
+                        </div>
+
+                        <div>
+                            <span>STATUS</span>
+                            PARTIALLY RECOVERED
+                        </div>
+
+                        <div>
+                            <span>ARCHIVE CONDITION</span>
+                            DAMAGED
+                        </div>
+
+                        <div>
+                            <span>RECOVERY DATE</span>
+                            [REDACTED]
+                        </div>
+
+                    </div>
+
+
+                    <div class="sd001Divider"></div>
+
+
+                    <div class="sd001Section">
+
+                        <div class="sd001SectionTitle">
+                            RESEARCH NOTE 01
+                        </div>
+
+                        <p>
+                            The subject continues to respond normally
+                            to the testing environment.
+                        </p>
+
+                        <p>
+                            Initial observations indicate that the
+                            subject is capable of completing all
+                            assigned tasks without external assistance.
+                        </p>
+
+                        <p>
+                            No significant physical abnormalities
+                            have been recorded at this stage.
+                        </p>
+
+                    </div>
+
+
+                    <div class="sd001Section">
+
+                        <div class="sd001SectionTitle">
+                            OBSERVATIONS
+                        </div>
+
+                        <p>
+                            Several inconsistencies have appeared
+                            during the later stages of testing.
+                        </p>
+
+                        <p>
+                            The subject has reported brief periods
+                            of missing information concerning
+                            previous events.
+                        </p>
+
+                        <p>
+                            These reports have not been confirmed
+                            by the research personnel.
+                        </p>
+
+                    </div>
+
+
+                    <div class="sd001Internal">
+
+                        <div class="sd001SectionTitle">
+                            INTERNAL NOTE
+                        </div>
+
+                        <p>
+                            Personnel are advised not to question
+                            the subject regarding previously
+                            completed procedures.
+                        </p>
+
+                        <p>
+                            Further investigation has been
+                            authorized.
+                        </p>
+
+                    </div>
+
+
+                    <div class="sd001Redacted">
+
+                        <div class="sd001SectionTitle">
+                            REMOVED INFORMATION
+                        </div>
+
+                        <div class="sd001BlackLine">
+                            ███████████████████████████████████
+                        </div>
+
+                        <div class="sd001BlackLine">
+                            ██████████████████████████
+                        </div>
+
+                        <div class="sd001BlackLine">
+                            ███████████████████████████████████████
+                        </div>
+
+                        <div class="sd001RedactedText">
+                            INFORMATION WITHHELD BY ARCHIVE AUTHORITY
+                        </div>
+
+                    </div>
+
+
+                    <div class="sd001Damaged">
+
+                        <div class="sd001SectionTitle">
+                            DOCUMENT RECOVERY
+                        </div>
+
+                        <p>
+                            The remainder of this document could not
+                            be recovered.
+                        </p>
+
+                        <div class="sd001Missing">
+
+                            ───────────────────────────────
+
+                            <br>
+
+                            DOCUMENT CONTINUES — DATA MISSING
+
+                            <br>
+
+                            ───────────────────────────────
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="sd001Footer">
+
+                        <span>
+                            ARCHIVE COPY — SD-001
+                        </span>
+
+                        <span>
+                            PAGE 01 / 03
+                        </span>
+
+                    </div>
+
+
+                    <div class="sd001FooterWarning">
+
+                        UNAUTHORIZED DUPLICATION PROHIBITED
+
+                    </div>
+
+
                 </div>
 
-                <h2>
-                    THE SIXTH DOOR PROJECT
-                </h2>
+                <br><br>
 
-                <div class="sd001DocumentTitle">
-                    RESEARCH DOCUMENT — SD-001
-                </div>
+            `;
 
-            </div>
+        break;
 
 
-            <!-- METADATA -->
-
-            <div class="sd001Meta">
-
-                <div>
-                    <span>DOCUMENT ID</span>
-                    SD-001
-                </div>
-
-                <div>
-                    <span>PROJECT</span>
-                    THE SIXTH DOOR
-                </div>
-
-                <div>
-                    <span>SECURITY</span>
-                    CLASSIFIED
-                </div>
-
-                <div>
-                    <span>STATUS</span>
-                    PARTIALLY RECOVERED
-                </div>
-
-                <div>
-                    <span>ARCHIVE CONDITION</span>
-                    DAMAGED
-                </div>
-
-                <div>
-                    <span>RECOVERY DATE</span>
-                    [REDACTED]
-                </div>
-
-            </div>
-
-
-            <div class="sd001Divider"></div>
-
-
-            <!-- RESEARCH SECTION -->
-
-            <div class="sd001Section">
-
-                <div class="sd001SectionTitle">
-                    RESEARCH NOTE 01
-                </div>
-
-                <p>
-                    The subject continues to respond normally
-                    to the testing environment.
-                </p>
-
-                <p>
-                    Initial observations indicate that the
-                    subject is capable of completing all
-                    assigned tasks without external assistance.
-                </p>
-
-                <p>
-                    No significant physical abnormalities
-                    have been recorded at this stage.
-                </p>
-
-            </div>
-
-
-            <!-- OBSERVATION -->
-
-            <div class="sd001Section">
-
-                <div class="sd001SectionTitle">
-                    OBSERVATIONS
-                </div>
-
-                <p>
-                    Several inconsistencies have appeared
-                    during the later stages of testing.
-                </p>
-
-                <p>
-                    The subject has reported brief periods
-                    of missing information concerning
-                    previous events.
-                </p>
-
-                <p>
-                    These reports have not been confirmed
-                    by the research personnel.
-                </p>
-
-            </div>
-
-
-            <!-- INTERNAL NOTE -->
-
-            <div class="sd001Internal">
-
-                <div class="sd001SectionTitle">
-                    INTERNAL NOTE
-                </div>
-
-                <p>
-                    Personnel are advised not to question
-                    the subject regarding previously
-                    completed procedures.
-                </p>
-
-                <p>
-                    Further investigation has been
-                    authorized.
-                </p>
-
-            </div>
-
-
-            <!-- REDACTED INFORMATION -->
-
-            <div class="sd001Redacted">
-
-                <div class="sd001SectionTitle">
-                    REMOVED INFORMATION
-                </div>
-
-                <div class="sd001BlackLine">
-                    ███████████████████████████████████
-                </div>
-
-                <div class="sd001BlackLine">
-                    ██████████████████████████
-                </div>
-
-                <div class="sd001BlackLine">
-                    ███████████████████████████████████████
-                </div>
-
-                <div class="sd001RedactedText">
-                    INFORMATION WITHHELD BY ARCHIVE AUTHORITY
-                </div>
-
-            </div>
-
-
-            <!-- DAMAGED SECTION -->
-
-            <div class="sd001Damaged">
-
-                <div class="sd001SectionTitle">
-                    DOCUMENT RECOVERY
-                </div>
-
-                <p>
-                    The remainder of this document could not
-                    be recovered.
-                </p>
-
-                <div class="sd001Missing">
-
-                    ───────────────────────────────
-
-                    <br>
-
-                    DOCUMENT CONTINUES — DATA MISSING
-
-                    <br>
-
-                    ───────────────────────────────
-
-                </div>
-
-            </div>
-
-
-            <!-- FOOTER -->
-
-            <div class="sd001Footer">
-
-                <span>
-                    ARCHIVE COPY — SD-001
-                </span>
-
-                <span>
-                    PAGE 01 / 03
-                </span>
-
-            </div>
-
-
-            <div class="sd001FooterWarning">
-
-                UNAUTHORIZED DUPLICATION PROHIBITED
-
-            </div>
-
-        </div>
-
-        <br><br>
-
-    `;
-
-break;
-
-
-        /* =========================
+        /* =================================================
            SD-002
-        ========================= */
+        ================================================= */
 
         case "sd-002":
 
             output.innerHTML += `
 
-            <span class="green">
-            CODE VERIFIED
-            </span>
-
-            <br>
-            ----------------
-            <br>
-
-            CLASSIFIED FILE SD-002
-
-            <br><br>
-
-            ARCHIVE STATUS: UNLOCKED
-            <br>
-            FILE TYPE: AUDIO LOG
-            <br>
-            SECURITY LEVEL: CLASSIFIED
-            <br>
-            AUDIO STATUS: RECOVERED
-
-            <br><br>
-
-
-            <div class="archivePlayer" id="sd002Player">
-
-                <div class="playerHeader">
-                    ARCHIVE AUDIO RECORDER — SD-002
-                </div>
-
-
-                <div class="recorderDisplay">
-
-                    <div class="reel"></div>
-
-                </div>
-
-
-                <div class="waveform">
-
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-
-                </div>
-
-
-                <audio
-                    id="sd002Audio"
-                    preload="metadata">
-
-                    <source
-                    src="assets/audio/SD-002.mp3"
-                    type="audio/mpeg">
-
-                </audio>
-
-
-                <input
-                    type="range"
-                    id="sd002Progress"
-                    class="playerProgress"
-                    value="0"
-                    min="0"
-                    max="100">
-
-
-                <div class="playerTime">
-
-                    <span id="sd002Current">
-                        00:00
-                    </span>
-
-                    <span id="sd002Duration">
-                        00:00
-                    </span>
-
-                </div>
-
+                <span class="green">
+                    CODE VERIFIED
+                </span>
 
                 <br>
+                ----------------
+                <br><br>
+
+                <div class="sd002File">
 
 
-                <div class="playerControls">
+                    <!-- HEADER -->
 
-                    <button onclick="playSD002()">
-                        PLAY
-                    </button>
+                    <div class="sd002TopLine">
 
-                    <button onclick="pauseSD002()">
-                        PAUSE
-                    </button>
+                        <span>
+                            CENTRAL AUDIO ARCHIVE
+                        </span>
 
-                    <button onclick="stopSD002()">
-                        STOP
-                    </button>
+                        <span>
+                            SD-002
+                        </span>
+
+                    </div>
+
+
+                    <div class="sd002Classification">
+
+                        CLASSIFIED
+
+                    </div>
+
+
+                    <div class="sd002Header">
+
+                        <div class="sd002SmallTitle">
+                            ARCHIVE RECORDING DIVISION
+                        </div>
+
+                        <h2>
+                            RECOVERED AUDIO LOG
+                        </h2>
+
+                        <div class="sd002DocumentTitle">
+                            AUDIO RECORD — SD-002
+                        </div>
+
+                    </div>
+
+
+                    <!-- METADATA -->
+
+                    <div class="sd002Meta">
+
+                        <div>
+                            <span>FILE ID</span>
+                            SD-002
+                        </div>
+
+                        <div>
+                            <span>PROJECT</span>
+                            THE SIXTH DOOR
+                        </div>
+
+                        <div>
+                            <span>FILE TYPE</span>
+                            AUDIO LOG
+                        </div>
+
+                        <div>
+                            <span>SECURITY</span>
+                            CLASSIFIED
+                        </div>
+
+                        <div>
+                            <span>STATUS</span>
+                            RECOVERED
+                        </div>
+
+                        <div>
+                            <span>AUDIO INTEGRITY</span>
+                            73%
+                        </div>
+
+                    </div>
+
+
+                    <div class="sd002Divider"></div>
+
+
+                    <!-- AUDIO RECORDER -->
+
+                    <div
+                        class="archivePlayer"
+                        id="sd002Player"
+                    >
+
+
+                        <div class="playerHeader">
+
+                            ARCHIVE AUDIO RECORDER — SD-002
+
+                        </div>
+
+
+                        <!-- RECORDER DISPLAY -->
+
+                        <div class="recorderDisplay">
+
+                            <div class="reel"></div>
+
+                        </div>
+
+
+                        <!-- WAVEFORM -->
+
+                        <div class="waveform">
+
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+
+                        </div>
+
+
+                        <!-- AUDIO FILE -->
+
+                        <audio
+                            id="sd002Audio"
+                            preload="metadata"
+                        >
+
+                            <source
+                                src="assets/audio/SD-002.mp3"
+                                type="audio/mpeg"
+                            >
+
+                        </audio>
+
+
+                        <!-- PROGRESS -->
+
+                        <input
+                            type="range"
+                            id="sd002Progress"
+                            class="playerProgress"
+                            value="0"
+                            min="0"
+                            max="100"
+                            step="0.1"
+                        >
+
+
+                        <!-- TIME -->
+
+                        <div class="playerTime">
+
+                            <span id="sd002Current">
+                                00:00
+                            </span>
+
+                            <span id="sd002Duration">
+                                00:00
+                            </span>
+
+                        </div>
+
+
+                        <br>
+
+
+                        <!-- CONTROLS -->
+
+                        <div class="playerControls">
+
+                            <button
+                                onclick="playSD002()"
+                            >
+                                PLAY
+                            </button>
+
+                            <button
+                                onclick="pauseSD002()"
+                            >
+                                PAUSE
+                            </button>
+
+                            <button
+                                onclick="stopSD002()"
+                            >
+                                STOP
+                            </button>
+
+                        </div>
+
+
+                        <!-- STATUS -->
+
+                        <div
+                            class="playerStatus"
+                            id="sd002Status"
+                        >
+
+                            AUDIO STATUS:
+                            INITIALIZING...
+
+                            <br>
+
+                            AUDIO INTEGRITY:
+                            73%
+
+                            <br>
+
+                            RECOVERY STATUS:
+                            PARTIAL
+
+                            <br>
+
+                            SOURCE IDENTITY:
+                            [REDACTED]
+
+                        </div>
+
+
+                    </div>
+
+
+                    <!-- RECOVERY WARNING -->
+
+                    <div class="sd002Warning">
+
+                        <strong>
+                            ARCHIVE WARNING
+                        </strong>
+
+                        <br><br>
+
+                        This recording was recovered from
+                        damaged archive storage.
+
+                        <br><br>
+
+                        Portions of the original recording
+                        may be missing or corrupted.
+
+                    </div>
+
+
+                    <!-- FOOTER -->
+
+                    <div class="sd002Footer">
+
+                        <span>
+                            ARCHIVE COPY — SD-002
+                        </span>
+
+                        <span>
+                            AUDIO RECORD
+                        </span>
+
+                    </div>
+
 
                 </div>
 
-
-                <div class="playerStatus">
-
-                    AUDIO INTEGRITY: 73%<br>
-                    RECOVERY STATUS: PARTIAL<br>
-                    SOURCE IDENTITY: [REDACTED]
-
-                </div>
-
-            </div>
-
-            <br><br>
+                <br><br>
 
             `;
+
+
+            /*
+             * The HTML above has now been inserted into
+             * terminalOutput, so the audio player can be
+             * initialized safely.
+             */
 
             setupSD002();
 
         break;
 
 
-        /* =========================
+        /* =================================================
            SD-003
-        ========================= */
+        ================================================= */
 
         case "sd-003":
 
             output.innerHTML += `
 
-            <span class="green">
-            CODE VERIFIED
-            </span>
+                <span class="green">
+                    CODE VERIFIED
+                </span>
 
-            <br>
-            ----------------
-            <br>
+                <br>
+                ----------------
+                <br><br>
 
-            CLASSIFIED FILE SD-003
+                CLASSIFIED FILE SD-003
 
-            <br><br>
+                <br><br>
 
-            ARCHIVE STATUS: UNLOCKED
-            <br>
-            FILE TYPE: VIDEO
-            <br>
-            SECURITY LEVEL: CLASSIFIED
+                ARCHIVE STATUS: UNLOCKED
+                <br>
 
-            <br><br>
+                FILE TYPE: VIDEO
+                <br>
 
-            [ VIDEO FILE PLACEHOLDER ]
+                SECURITY LEVEL: CLASSIFIED
 
-            <br><br>
+                <br><br>
+
+                [ VIDEO FILE PLACEHOLDER ]
+
+                <br><br>
 
             `;
 
         break;
 
 
-        /* =========================
+        /* =================================================
            SD-004
-        ========================= */
+        ================================================= */
 
         case "sd-004":
 
             output.innerHTML += `
 
-            <span class="green">
-            CODE VERIFIED
-            </span>
+                <span class="green">
+                    CODE VERIFIED
+                </span>
 
-            <br>
-            ----------------
-            <br>
+                <br>
+                ----------------
+                <br><br>
 
-            CLASSIFIED ARCHIVE MESSAGE
+                CLASSIFIED ARCHIVE MESSAGE
 
-            <br><br>
+                <br><br>
 
-            "The Archive remembers what
-            the creator has forgot."
+                "The Archive remembers what
+                the creator has forgot."
 
-            <br><br>
+                <br><br>
 
-            SECURITY LEVEL: █████
+                SECURITY LEVEL: █████
 
-            <br><br>
+                <br><br>
 
             `;
 
         break;
 
 
-        /* =========================
+        /* =================================================
            SECRET CREATOR MESSAGE
-        ========================= */
+        ================================================= */
 
         case "creator-1.00.4.6/real":
 
             output.innerHTML += `
 
-            <br>
-
-            <div style="
-                border:1px solid #C9A227;
-                padding:25px;
-                margin-top:15px;
-                background:#080706;
-                color:#EAEAEA;
-                line-height:1.8;
-                font-family:'IBM Plex Mono', monospace;
-            ">
+                <br>
 
                 <div style="
-                    color:#C9A227;
-                    text-align:center;
-                    margin-bottom:25px;
-                    letter-spacing:2px;
+                    border:1px solid #C9A227;
+                    padding:25px;
+                    margin-top:15px;
+                    background:#080706;
+                    color:#EAEAEA;
+                    line-height:1.8;
+                    font-family:'IBM Plex Mono', monospace;
                 ">
-                    [ PRIVATE CREATOR MESSAGE ]
+
+                    <div style="
+                        color:#C9A227;
+                        text-align:center;
+                        margin-bottom:25px;
+                        letter-spacing:2px;
+                    ">
+
+                        [ PRIVATE CREATOR MESSAGE ]
+
+                    </div>
+
+
+                    Hey dear genius.
+
+                    <br><br>
+
+                    If you're reading this, you actually found it.
+
+                    <br><br>
+
+                    This isn't part of the story.
+
+                    <br>
+                    It's not another experiment.
+
+                    <br>
+                    And it's not some secret character.
+
+                    <br><br>
+
+                    It's me. The creator.
+
+                    <br><br>
+
+                    I'm the person who created The Sixth Door
+                    and built this Archive.
+
+                    <br><br>
+
+                    I wanted to leave something here for the
+                    people who were curious enough to look deeper
+                    and understand everything.
+
+                    <br><br>
+
+                    You could've just played the game and left.
+
+                    <br><br>
+
+                    But you didn't.
+
+                    <br><br>
+
+                    So... thank you very much.
+
+                    <br><br>
+
+                    Every hidden file, every strange code,
+                    every little detail you found was put here
+                    for a reason.
+
+                    <br><br>
+
+                    And somehow, you found your way to this one.
+
+                    <br><br>
+
+                    And just to make some things clear:
+
+                    <br><br>
+
+                    This message is real.
+
+                    <br><br>
+
+                    I'm not a character in the story.
+
+                    <br>
+                    This isn't part of the lore.
+
+                    <br>
+                    And you don't need to look for some hidden
+                    meaning in this message.
+
+                    <br><br>
+
+                    It's just me.
+
+                    <br><br>
+
+                    The actual creator of this project, saying
+                    thank you to the people who cared enough to
+                    look this far.
+
+                    <br><br>
+
+                    There isn't anything else you need to do here.
+
+                    <br><br>
+
+                    You found me.
+
+                    <br><br>
+
+                    Thank you for playing The Sixth Door.
+
+                    <br><br>
+
+                    And thank you for being curious.
+
+                    <br><br>
+
+                    <span style="color:#C9A227;">
+
+                        Iyad Mutwakill
+
+                    </span>
+
+                    <br>
+
+                    Creator of Project: The Sixth Door
+
                 </div>
 
-                Hey dear genius.
                 <br><br>
-
-                If you're reading this, you actually found it.
-                <br><br>
-
-                This isn't part of the story.
-                <br>
-                It's not another experiment.
-                <br>
-                And it's not some secret character.
-                <br><br>
-
-                It's me. The creator.
-                <br><br>
-
-                I'm the person who created The Sixth Door and built this Archive.
-                <br><br>
-
-                I wanted to leave something here for the people who were curious enough to look deeper and understand everything.
-                <br><br>
-
-                You could've just played the game and left.
-                <br><br>
-
-                But you didn't.
-                <br><br>
-
-                So... thank you very much.
-                <br><br>
-
-                Every hidden file, every strange code, every little detail you found was put here for a reason.
-                <br><br>
-
-                And somehow, you found your way to this one.
-                <br><br>
-
-                And just to make some things clear:
-                <br><br>
-
-                This message is real.
-                <br><br>
-
-                I'm not a character in the story.
-                <br>
-                This isn't part of the lore.
-                <br>
-                And you don't need to look for some hidden meaning in this message.
-                <br><br>
-
-                It's just me.
-                <br><br>
-
-                The actual creator of this project, saying thank you to the people who cared enough to look this far.
-                <br><br>
-
-                There isn't anything else you need to do here.
-                <br><br>
-
-                You found me.
-                <br><br>
-
-                Thank you for playing The Sixth Door.
-                <br><br>
-
-                And thank you for being curious.
-                <br><br>
-
-                <span style="color:#C9A227;">
-                    Iyad Mutwakill
-                </span>
-                <br>
-                Creator of Project: The Sixth Door
-
-            </div>
-
-            <br><br>
 
             `;
 
         break;
 
 
-        /* =========================
-           UNKNOWN
-        ========================= */
+        /* =================================================
+           UNKNOWN COMMAND
+        ================================================= */
 
         default:
 
             output.innerHTML += `
-            Unknown Command
-            <br><br>
+
+                Unknown Command
+
+                <br><br>
+
             `;
 
     }
@@ -750,7 +942,8 @@ break;
 
     input.value = "";
 
-    output.scrollTop = output.scrollHeight;
+    output.scrollTop =
+        output.scrollHeight;
 
 }
 
@@ -761,11 +954,24 @@ break;
 
 function setupSD002(){
 
-    const audio = document.getElementById("sd002Audio");
-    const progress = document.getElementById("sd002Progress");
-    const current = document.getElementById("sd002Current");
-    const duration = document.getElementById("sd002Duration");
-    const player = document.getElementById("sd002Player");
+    const audio =
+        document.getElementById("sd002Audio");
+
+    const progress =
+        document.getElementById("sd002Progress");
+
+    const current =
+        document.getElementById("sd002Current");
+
+    const duration =
+        document.getElementById("sd002Duration");
+
+    const player =
+        document.getElementById("sd002Player");
+
+    const status =
+        document.getElementById("sd002Status");
+
 
     if(
         !audio ||
@@ -773,92 +979,296 @@ function setupSD002(){
         !current ||
         !duration ||
         !player
-    ) return;
+    ){
+
+        return;
+
+    }
 
 
-    audio.addEventListener("loadedmetadata", function(){
+    /* =====================================================
+       AUDIO LOADED
+    ===================================================== */
 
-        duration.textContent =
-            formatTime(audio.duration);
+    audio.addEventListener(
+        "loadedmetadata",
+        function(){
 
-    });
+            if(
+                isFinite(audio.duration) &&
+                audio.duration > 0
+            ){
 
+                duration.textContent =
+                    formatTime(audio.duration);
 
-    audio.addEventListener("timeupdate", function(){
+                if(status){
 
-        if(!audio.duration) return;
+                    status.innerHTML = `
+                        AUDIO STATUS: READY
+                        <br>
+                        AUDIO INTEGRITY: 73%
+                        <br>
+                        RECOVERY STATUS: PARTIAL
+                        <br>
+                        SOURCE IDENTITY: [REDACTED]
+                    `;
 
-        progress.value =
-            (audio.currentTime / audio.duration) * 100;
+                }
 
-        current.textContent =
-            formatTime(audio.currentTime);
+            }
 
-    });
-
-
-    audio.addEventListener("play", function(){
-
-        player.classList.add("playing");
-
-    });
-
-
-    audio.addEventListener("pause", function(){
-
-        player.classList.remove("playing");
-
-    });
-
-
-    audio.addEventListener("ended", function(){
-
-        player.classList.remove("playing");
-
-        progress.value = 100;
-
-    });
+        }
+    );
 
 
-    progress.addEventListener("input", function(){
+    /* =====================================================
+       AUDIO TIME UPDATE
+    ===================================================== */
 
-        if(!audio.duration) return;
+    audio.addEventListener(
+        "timeupdate",
+        function(){
 
-        audio.currentTime =
-            (progress.value / 100) * audio.duration;
+            if(!audio.duration) return;
 
-    });
+
+            progress.value =
+                (audio.currentTime /
+                audio.duration) * 100;
+
+
+            current.textContent =
+                formatTime(audio.currentTime);
+
+        }
+    );
+
+
+    /* =====================================================
+       PLAY
+    ===================================================== */
+
+    audio.addEventListener(
+        "play",
+        function(){
+
+            player.classList.add("playing");
+
+            if(status){
+
+                status.innerHTML = `
+                    AUDIO STATUS: PLAYING
+                    <br>
+                    AUDIO INTEGRITY: 73%
+                    <br>
+                    RECOVERY STATUS: PARTIAL
+                    <br>
+                    SOURCE IDENTITY: [REDACTED]
+                `;
+
+            }
+
+        }
+    );
+
+
+    /* =====================================================
+       PAUSE
+    ===================================================== */
+
+    audio.addEventListener(
+        "pause",
+        function(){
+
+            player.classList.remove("playing");
+
+            /*
+             * Don't say STOPPED when the user merely
+             * pressed pause.
+             */
+
+            if(
+                audio.currentTime > 0 &&
+                audio.currentTime < audio.duration
+            ){
+
+                if(status){
+
+                    status.innerHTML = `
+                        AUDIO STATUS: PAUSED
+                        <br>
+                        AUDIO INTEGRITY: 73%
+                        <br>
+                        RECOVERY STATUS: PARTIAL
+                        <br>
+                        SOURCE IDENTITY: [REDACTED]
+                    `;
+
+                }
+
+            }
+
+        }
+    );
+
+
+    /* =====================================================
+       AUDIO ENDED
+    ===================================================== */
+
+    audio.addEventListener(
+        "ended",
+        function(){
+
+            player.classList.remove("playing");
+
+            progress.value = 100;
+
+
+            if(status){
+
+                status.innerHTML = `
+                    AUDIO STATUS: RECORDING COMPLETE
+                    <br>
+                    AUDIO INTEGRITY: 73%
+                    <br>
+                    RECOVERY STATUS: PARTIAL
+                    <br>
+                    SOURCE IDENTITY: [REDACTED]
+                `;
+
+            }
+
+        }
+    );
+
+
+    /* =====================================================
+       AUDIO ERROR
+    ===================================================== */
+
+    audio.addEventListener(
+        "error",
+        function(){
+
+            player.classList.remove("playing");
+
+
+            if(status){
+
+                status.innerHTML = `
+                    AUDIO STATUS: FILE ERROR
+                    <br>
+                    SD-002 AUDIO COULD NOT BE RECOVERED
+                    <br>
+                    CHECK: assets/audio/SD-002.mp3
+                `;
+
+            }
+
+        }
+    );
+
+
+    /* =====================================================
+       PROGRESS BAR
+    ===================================================== */
+
+    progress.addEventListener(
+        "input",
+        function(){
+
+            if(!audio.duration) return;
+
+
+            audio.currentTime =
+                (progress.value / 100) *
+                audio.duration;
+
+        }
+    );
 
 }
 
+
+/* =========================================================
+   SD-002 PLAY
+========================================================= */
 
 function playSD002(){
 
     const audio =
         document.getElementById("sd002Audio");
 
-    if(audio){
+    const status =
+        document.getElementById("sd002Status");
 
-        audio.play();
+
+    if(!audio){
+
+        return;
 
     }
 
+
+    audio.play()
+    .then(function(){
+
+        if(status){
+
+            status.innerHTML = `
+                AUDIO STATUS: PLAYING
+                <br>
+                AUDIO INTEGRITY: 73%
+                <br>
+                RECOVERY STATUS: PARTIAL
+                <br>
+                SOURCE IDENTITY: [REDACTED]
+            `;
+
+        }
+
+    })
+    .catch(function(){
+
+        if(status){
+
+            status.innerHTML = `
+                AUDIO STATUS: PLAYBACK ERROR
+                <br>
+                CHECK AUDIO FILE
+                <br>
+                SOURCE:
+                assets/audio/SD-002.mp3
+            `;
+
+        }
+
+    });
+
 }
 
+
+/* =========================================================
+   SD-002 PAUSE
+========================================================= */
 
 function pauseSD002(){
 
     const audio =
         document.getElementById("sd002Audio");
 
-    if(audio){
+    if(!audio) return;
 
-        audio.pause();
-
-    }
+    audio.pause();
 
 }
 
+
+/* =========================================================
+   SD-002 STOP
+========================================================= */
 
 function stopSD002(){
 
@@ -868,6 +1278,13 @@ function stopSD002(){
     const progress =
         document.getElementById("sd002Progress");
 
+    const current =
+        document.getElementById("sd002Current");
+
+    const status =
+        document.getElementById("sd002Status");
+
+
     if(audio){
 
         audio.pause();
@@ -876,9 +1293,42 @@ function stopSD002(){
 
     }
 
+
     if(progress){
 
         progress.value = 0;
+
+    }
+
+
+    if(current){
+
+        current.textContent = "00:00";
+
+    }
+
+
+    if(status){
+
+        status.innerHTML = `
+            AUDIO STATUS: STOPPED
+            <br>
+            AUDIO INTEGRITY: 73%
+            <br>
+            RECOVERY STATUS: PARTIAL
+            <br>
+            SOURCE IDENTITY: [REDACTED]
+        `;
+
+    }
+
+
+    const player =
+        document.getElementById("sd002Player");
+
+    if(player){
+
+        player.classList.remove("playing");
 
     }
 
@@ -905,6 +1355,10 @@ const audioLogs = {
 
 };
 
+
+/* =========================================================
+   PLAY ARCHIVE AUDIO LOG
+========================================================= */
 
 function playAudioLog(logID){
 
@@ -956,14 +1410,16 @@ function playAudioLog(logID){
     audio.load();
 
 
-    audio.play().then(function(){
+    audio.play()
+    .then(function(){
 
         status.textContent =
             "PLAYING — " + logID;
 
         startAudioReels();
 
-    }).catch(function(){
+    })
+    .catch(function(){
 
         status.textContent =
             "READY — PRESS PLAY";
@@ -972,6 +1428,10 @@ function playAudioLog(logID){
 
 }
 
+
+/* =========================================================
+   ARCHIVE AUDIO PLAY / PAUSE
+========================================================= */
 
 function toggleArchiveAudio(){
 
@@ -1019,6 +1479,10 @@ function toggleArchiveAudio(){
 }
 
 
+/* =========================================================
+   ARCHIVE AUDIO STOP
+========================================================= */
+
 function stopArchiveAudio(){
 
     const audio =
@@ -1050,15 +1514,19 @@ function stopArchiveAudio(){
 }
 
 
+/* =========================================================
+   AUDIO REELS
+========================================================= */
+
 function startAudioReels(){
 
     document
-    .querySelectorAll("#audioPlayer .reel")
-    .forEach(function(reel){
+        .querySelectorAll("#audioPlayer .reel")
+        .forEach(function(reel){
 
-        reel.classList.add("spinning");
+            reel.classList.add("spinning");
 
-    });
+        });
 
 }
 
@@ -1066,12 +1534,12 @@ function startAudioReels(){
 function stopAudioReels(){
 
     document
-    .querySelectorAll("#audioPlayer .reel")
-    .forEach(function(reel){
+        .querySelectorAll("#audioPlayer .reel")
+        .forEach(function(reel){
 
-        reel.classList.remove("spinning");
+            reel.classList.remove("spinning");
 
-    });
+        });
 
 }
 
@@ -1082,7 +1550,10 @@ function stopAudioReels(){
 
 function formatTime(seconds){
 
-    if(!seconds || isNaN(seconds)){
+    if(
+        !isFinite(seconds) ||
+        seconds < 0
+    ){
 
         return "00:00";
 
@@ -1120,9 +1591,12 @@ function openWindow(id){
 
     if(!win) return;
 
+
     win.style.display = "block";
 
+
     highestZ++;
+
 
     win.style.zIndex =
         highestZ;
@@ -1137,6 +1611,7 @@ function closeWindow(id){
 
     if(!win) return;
 
+
     win.style.display = "none";
 
 }
@@ -1146,69 +1621,79 @@ function closeWindow(id){
    DRAGGABLE WINDOWS
 ========================================================= */
 
-document.querySelectorAll(".window")
-.forEach(function(windowElement){
+document
+    .querySelectorAll(".window")
+    .forEach(function(windowElement){
 
-    var titleBar =
-        windowElement.querySelector(".windowTitle");
-
-    if(!titleBar) return;
-
-    var dragging = false;
-
-    var offsetX = 0;
-    var offsetY = 0;
+        var titleBar =
+            windowElement.querySelector(".windowTitle");
 
 
-    titleBar.addEventListener(
-        "mousedown",
-        function(e){
-
-            dragging = true;
-
-            highestZ++;
-
-            windowElement.style.zIndex =
-                highestZ;
-
-            offsetX =
-                e.clientX -
-                windowElement.offsetLeft;
-
-            offsetY =
-                e.clientY -
-                windowElement.offsetTop;
-
-        }
-    );
+        if(!titleBar) return;
 
 
-    document.addEventListener(
-        "mousemove",
-        function(e){
-
-            if(!dragging) return;
-
-            windowElement.style.left =
-                (e.clientX - offsetX) + "px";
-
-            windowElement.style.top =
-                (e.clientY - offsetY) + "px";
-
-        }
-    );
+        var dragging = false;
 
 
-    document.addEventListener(
-        "mouseup",
-        function(){
+        var offsetX = 0;
+        var offsetY = 0;
 
-            dragging = false;
 
-        }
-    );
+        titleBar.addEventListener(
+            "mousedown",
+            function(e){
 
-});
+                dragging = true;
+
+
+                highestZ++;
+
+
+                windowElement.style.zIndex =
+                    highestZ;
+
+
+                offsetX =
+                    e.clientX -
+                    windowElement.offsetLeft;
+
+
+                offsetY =
+                    e.clientY -
+                    windowElement.offsetTop;
+
+            }
+        );
+
+
+        document.addEventListener(
+            "mousemove",
+            function(e){
+
+                if(!dragging) return;
+
+
+                windowElement.style.left =
+                    (e.clientX - offsetX) + "px";
+
+
+                windowElement.style.top =
+                    (e.clientY - offsetY) + "px";
+
+            }
+        );
+
+
+        document.addEventListener(
+            "mouseup",
+            function(){
+
+                dragging = false;
+
+            }
+        );
+
+    });
 
 
 /* =========================================================
@@ -1220,7 +1705,9 @@ function updateClock(){
     var clock =
         document.getElementById("clock");
 
+
     if(!clock) return;
+
 
     clock.textContent =
         new Date().toLocaleTimeString();
@@ -1228,6 +1715,10 @@ function updateClock(){
 }
 
 
-setInterval(updateClock,1000);
+setInterval(
+    updateClock,
+    1000
+);
+
 
 updateClock();

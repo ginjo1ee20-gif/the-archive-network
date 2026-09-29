@@ -53,6 +53,10 @@
 <div class="desktop" id="mainDesktop">
 
 
+<!-- =====================================================
+     TOP BAR
+===================================================== -->
+
 <div class="topBar">
 
     <div class="logo">
@@ -66,7 +70,9 @@
 </div>
 
 
-<!-- TERMINAL -->
+<!-- =====================================================
+     TERMINAL DESKTOP ICON
+===================================================== -->
 
 <div
 class="icon"
@@ -79,13 +85,19 @@ ondblclick="openWindow('terminalWindow')">
 </div>
 
 
+<!-- =====================================================
+     TERMINAL WINDOW
+===================================================== -->
+
 <div id="terminalWindow" class="window">
 
     <div class="windowTitle">
 
         Archive Terminal
 
-        <span onclick="closeWindow('terminalWindow')">✖</span>
+        <span onclick="closeWindow('terminalWindow')">
+            ✖
+        </span>
 
     </div>
 
@@ -94,9 +106,13 @@ ondblclick="openWindow('terminalWindow')">
 
         <div id="terminalOutput">
 
-            <p>ARCHIVE TERMINAL v1.0</p>
+            <p>
+                ARCHIVE TERMINAL v1.0
+            </p>
 
-            <p>Type HELP to begin.</p>
+            <p>
+                Type HELP to begin.
+            </p>
 
         </div>
 
@@ -112,10 +128,14 @@ ondblclick="openWindow('terminalWindow')">
 </div>
 
 
-<!-- DESKTOP ICONS -->
+<!-- =====================================================
+     DESKTOP ICONS
+===================================================== -->
 
 <div class="desktopIcons">
 
+
+<!-- RESEARCH FILES ICON -->
 
 <div
 class="icon"
@@ -123,10 +143,14 @@ ondblclick="openWindow('researchWindow')">
 
     ▤
 
-    <p>Research Files</p>
+    <p>
+        Research Files
+    </p>
 
 </div>
 
+
+<!-- PERSONNEL ICON -->
 
 <div
 class="icon"
@@ -134,10 +158,14 @@ ondblclick="openWindow('personnelWindow')">
 
     ◉
 
-    <p>Personnel</p>
+    <p>
+        Personnel
+    </p>
 
 </div>
 
+
+<!-- CAMERAS ICON -->
 
 <div
 class="icon"
@@ -145,10 +173,14 @@ ondblclick="openWindow('cameraWindow')">
 
     ▣
 
-    <p>Cameras</p>
+    <p>
+        Cameras
+    </p>
 
 </div>
 
+
+<!-- AUDIO LOGS ICON -->
 
 <div
 class="icon"
@@ -156,7 +188,9 @@ ondblclick="openWindow('audioWindow')">
 
     ♪
 
-    <p>Audio Logs</p>
+    <p>
+        Audio Logs
+    </p>
 
 </div>
 
@@ -170,27 +204,32 @@ ondblclick="openWindow('audioWindow')">
 
 <div id="researchWindow" class="window">
 
-<div class="windowTitle">
+    <div class="windowTitle">
 
-Research Files
+        Research Files
 
-<span onclick="closeWindow('researchWindow')">✖</span>
+        <span onclick="closeWindow('researchWindow')">
+            ✖
+        </span>
 
-</div>
+    </div>
 
-<div class="windowContent">
 
-<h2>FILE-001</h2>
+    <div class="windowContent">
 
-<p>
+        <h2>
+            FILE-001
+        </h2>
 
-Project Sixth Door officially entered testing.
+        <p>
 
-Further information remains classified.
+            Project Sixth Door officially entered testing.
 
-</p>
+            Further information remains classified.
 
-</div>
+        </p>
+
+    </div>
 
 </div>
 
@@ -202,13 +241,22 @@ Further information remains classified.
 <div id="personnelWindow" class="window">
 
     <div class="windowTitle">
+
         Personnel
-        <span onclick="closeWindow('personnelWindow')">✖</span>
+
+        <span onclick="closeWindow('personnelWindow')">
+            ✖
+        </span>
+
     </div>
+
 
     <div class="windowContent">
 
         <div class="personnelArchive">
+
+
+            <!-- PERSONNEL HEADER -->
 
             <div class="personnelHeader">
 
@@ -224,11 +272,16 @@ Further information remains classified.
 
 
             <div class="personnelStatus">
-                PERSONNEL RECORDS — RESTRICTED ACCESS
+
+                PERSONNEL RECORDS —
+                RESTRICTED ACCESS
+
             </div>
 
 
-            <!-- PERSONNEL 001 -->
+            <!-- =================================================
+                 PERSONNEL 001
+            ================================================= -->
 
             <div class="personnelRecord">
 
@@ -244,41 +297,86 @@ Further information remains classified.
 
                 </div>
 
+
                 <div class="personnelInfo">
 
                     <p>
-                        <span>NAME</span>
-                        DR. [REDACTED]
+
+                        <span>
+                            NAME
+                        </span>
+
+                        DR. ELIAS VOSS
+
                     </p>
 
+
                     <p>
-                        <span>DEPARTMENT</span>
+
+                        <span>
+                            POSITION
+                        </span>
+
+                        LEAD SCIENTIST
+
+                    </p>
+
+
+                    <p>
+
+                        <span>
+                            DEPARTMENT
+                        </span>
+
                         RESEARCH DIVISION
+
                     </p>
 
+
                     <p>
-                        <span>CLEARANCE</span>
+
+                        <span>
+                            CLEARANCE
+                        </span>
+
                         LEVEL 04
+
                     </p>
 
+
                     <p>
-                        <span>ASSIGNMENT</span>
+
+                        <span>
+                            ASSIGNMENT
+                        </span>
+
                         SIXTH DOOR PROJECT
+
                     </p>
 
                 </div>
 
+
                 <div class="personnelNote">
 
-                    Personnel assigned to primary
-                    research operations.
+                    Primary scientific authority assigned
+                    to the Sixth Door Project.
+
+                    <br>
+                    <br>
+
+                    Authorized to approve experimental
+                    procedures, archive research and
+                    subject testing.
 
                 </div>
 
             </div>
 
 
-            <!-- PERSONNEL 002 -->
+            <!-- =================================================
+                 PERSONNEL 002
+            ================================================= -->
 
             <div class="personnelRecord">
 
@@ -294,41 +392,87 @@ Further information remains classified.
 
                 </div>
 
+
                 <div class="personnelInfo">
 
                     <p>
-                        <span>NAME</span>
-                        [REDACTED]
+
+                        <span>
+                            NAME
+                        </span>
+
+                        MARA VALE
+
                     </p>
 
-                    <p>
-                        <span>DEPARTMENT</span>
-                        OBSERVATION
-                    </p>
 
                     <p>
-                        <span>CLEARANCE</span>
+
+                        <span>
+                            POSITION
+                        </span>
+
+                        PROJECT ADMINISTRATOR
+
+                    </p>
+
+
+                    <p>
+
+                        <span>
+                            DEPARTMENT
+                        </span>
+
+                        PROJECT MANAGEMENT
+
+                    </p>
+
+
+                    <p>
+
+                        <span>
+                            CLEARANCE
+                        </span>
+
                         LEVEL 03
+
                     </p>
 
+
                     <p>
-                        <span>ASSIGNMENT</span>
-                        TESTING FACILITY
+
+                        <span>
+                            ASSIGNMENT
+                        </span>
+
+                        SIXTH DOOR PROJECT
+
                     </p>
 
                 </div>
 
+
                 <div class="personnelNote">
 
-                    Additional information requires
-                    authorization from Archive Command.
+                    Responsible for administrative records,
+                    personnel coordination and project
+                    authorization.
+
+                    <br>
+                    <br>
+
+                    Several records associated with this
+                    personnel member have been removed
+                    from the archive.
 
                 </div>
 
             </div>
 
 
-            <!-- PERSONNEL 003 -->
+            <!-- =================================================
+                 PERSONNEL 003
+            ================================================= -->
 
             <div class="personnelRecord">
 
@@ -344,41 +488,86 @@ Further information remains classified.
 
                 </div>
 
+
                 <div class="personnelInfo">
 
                     <p>
-                        <span>NAME</span>
-                        [REDACTED]
+
+                        <span>
+                            NAME
+                        </span>
+
+                        ADRIAN CROSS
+
                     </p>
 
+
                     <p>
-                        <span>DEPARTMENT</span>
+
+                        <span>
+                            POSITION
+                        </span>
+
+                        SYSTEMS ENGINEER
+
+                    </p>
+
+
+                    <p>
+
+                        <span>
+                            DEPARTMENT
+                        </span>
+
                         ENGINEERING
+
                     </p>
 
+
                     <p>
-                        <span>CLEARANCE</span>
+
+                        <span>
+                            CLEARANCE
+                        </span>
+
                         LEVEL 02
+
                     </p>
 
+
                     <p>
-                        <span>ASSIGNMENT</span>
-                        SYSTEMS MAINTENANCE
+
+                        <span>
+                            ASSIGNMENT
+                        </span>
+
+                        ARCHIVE SYSTEMS
+
                     </p>
 
                 </div>
 
+
                 <div class="personnelNote">
 
-                    Personnel record transferred to
-                    external archive.
+                    Responsible for maintenance of archive
+                    systems, testing equipment and internal
+                    communication systems.
+
+                    <br>
+                    <br>
+
+                    Personnel transferred shortly before
+                    the final project shutdown.
 
                 </div>
 
             </div>
 
 
-            <!-- PERSONNEL 004 -->
+            <!-- =================================================
+                 PERSONNEL 004
+            ================================================= -->
 
             <div class="personnelRecord personnelCorrupt">
 
@@ -394,52 +583,102 @@ Further information remains classified.
 
                 </div>
 
+
                 <div class="personnelInfo">
 
                     <p>
-                        <span>NAME</span>
+
+                        <span>
+                            NAME
+                        </span>
+
                         █████████████
+
                     </p>
 
+
                     <p>
-                        <span>DEPARTMENT</span>
+
+                        <span>
+                            POSITION
+                        </span>
+
                         ███████████
+
                     </p>
 
+
                     <p>
-                        <span>CLEARANCE</span>
+
+                        <span>
+                            DEPARTMENT
+                        </span>
+
+                        ███████████
+
+                    </p>
+
+
+                    <p>
+
+                        <span>
+                            CLEARANCE
+                        </span>
+
                         ████
+
                     </p>
 
+
                     <p>
-                        <span>ASSIGNMENT</span>
+
+                        <span>
+                            ASSIGNMENT
+                        </span>
+
                         █████████████
+
                     </p>
 
                 </div>
+
 
                 <div class="personnelNote">
 
                     DATABASE RECOVERY FAILED.
 
                     <br>
+                    <br>
 
                     Remaining information unavailable.
+
+                    <br>
+                    <br>
+
+                    LAST ARCHIVE REFERENCE:
+                    <strong>SD-004</strong>
 
                 </div>
 
             </div>
 
 
+            <!-- =================================================
+                 PERSONNEL FOOTER
+            ================================================= -->
+
             <div class="personnelFooter">
 
-                TOTAL RECORDS: 04
+                <span>
+                    TOTAL RECORDS: 04
+                </span>
 
                 <span>
                     ARCHIVE STATUS: PARTIAL
                 </span>
 
             </div>
+
 
         </div>
 
@@ -455,13 +694,20 @@ Further information remains classified.
 <div id="cameraWindow" class="window">
 
     <div class="windowTitle">
+
         Security Cameras
-        <span onclick="closeWindow('cameraWindow')">✖</span>
+
+        <span onclick="closeWindow('cameraWindow')">
+            ✖
+        </span>
+
     </div>
+
 
     <div class="windowContent">
 
         <div class="cameraArchive">
+
 
             <div class="cameraHeader">
 
@@ -479,12 +725,17 @@ Further information remains classified.
             <div class="cameraStatus">
 
                 CAMERA NETWORK STATUS:
-                <strong>PARTIALLY OPERATIONAL</strong>
+
+                <strong>
+                    PARTIALLY OPERATIONAL
+                </strong>
 
             </div>
 
 
-            <!-- CAMERA 01 -->
+            <!-- =================================================
+                 CAMERA 01
+            ================================================= -->
 
             <div class="cameraRecord">
 
@@ -500,24 +751,43 @@ Further information remains classified.
 
                 </div>
 
+
                 <div class="cameraInfo">
 
                     <p>
-                        <span>LOCATION</span>
+
+                        <span>
+                            LOCATION
+                        </span>
+
                         MAIN RESEARCH CORRIDOR
+
                     </p>
 
+
                     <p>
-                        <span>SIGNAL</span>
+
+                        <span>
+                            SIGNAL
+                        </span>
+
                         STABLE
+
                     </p>
 
+
                     <p>
-                        <span>RECORDING</span>
+
+                        <span>
+                            RECORDING
+                        </span>
+
                         AVAILABLE
+
                     </p>
 
                 </div>
+
 
                 <div class="cameraFeed">
 
@@ -532,7 +802,9 @@ Further information remains classified.
             </div>
 
 
-            <!-- CAMERA 02 -->
+            <!-- =================================================
+                 CAMERA 02
+            ================================================= -->
 
             <div class="cameraRecord">
 
@@ -548,24 +820,43 @@ Further information remains classified.
 
                 </div>
 
+
                 <div class="cameraInfo">
 
                     <p>
-                        <span>LOCATION</span>
+
+                        <span>
+                            LOCATION
+                        </span>
+
                         TESTING CHAMBER
+
                     </p>
 
+
                     <p>
-                        <span>SIGNAL</span>
+
+                        <span>
+                            SIGNAL
+                        </span>
+
                         STABLE
+
                     </p>
 
+
                     <p>
-                        <span>RECORDING</span>
+
+                        <span>
+                            RECORDING
+                        </span>
+
                         AVAILABLE
+
                     </p>
 
                 </div>
+
 
                 <div class="cameraFeed">
 
@@ -580,7 +871,9 @@ Further information remains classified.
             </div>
 
 
-            <!-- CAMERA 03 -->
+            <!-- =================================================
+                 CAMERA 03
+            ================================================= -->
 
             <div class="cameraRecord">
 
@@ -596,24 +889,43 @@ Further information remains classified.
 
                 </div>
 
+
                 <div class="cameraInfo">
 
                     <p>
-                        <span>LOCATION</span>
+
+                        <span>
+                            LOCATION
+                        </span>
+
                         ARCHIVE STORAGE
+
                     </p>
 
+
                     <p>
-                        <span>SIGNAL</span>
+
+                        <span>
+                            SIGNAL
+                        </span>
+
                         43% INTEGRITY
+
                     </p>
 
+
                     <p>
-                        <span>RECORDING</span>
+
+                        <span>
+                            RECORDING
+                        </span>
+
                         PARTIAL
+
                     </p>
 
                 </div>
+
 
                 <div class="cameraFeed cameraStatic">
 
@@ -632,7 +944,9 @@ Further information remains classified.
             </div>
 
 
-            <!-- CAMERA 04 -->
+            <!-- =================================================
+                 CAMERA 04
+            ================================================= -->
 
             <div class="cameraRecord">
 
@@ -648,24 +962,43 @@ Further information remains classified.
 
                 </div>
 
+
                 <div class="cameraInfo">
 
                     <p>
-                        <span>LOCATION</span>
+
+                        <span>
+                            LOCATION
+                        </span>
+
                         OBSERVATION ROOM
+
                     </p>
 
+
                     <p>
-                        <span>SIGNAL</span>
+
+                        <span>
+                            SIGNAL
+                        </span>
+
                         NO SIGNAL
+
                     </p>
 
+
                     <p>
-                        <span>RECORDING</span>
+
+                        <span>
+                            RECORDING
+                        </span>
+
                         UNAVAILABLE
+
                     </p>
 
                 </div>
+
 
                 <div class="cameraFeed">
 
@@ -680,7 +1013,9 @@ Further information remains classified.
             </div>
 
 
-            <!-- CAMERA 05 -->
+            <!-- =================================================
+                 CAMERA 05
+            ================================================= -->
 
             <div class="cameraRecord cameraRestricted">
 
@@ -696,24 +1031,43 @@ Further information remains classified.
 
                 </div>
 
+
                 <div class="cameraInfo">
 
                     <p>
-                        <span>LOCATION</span>
+
+                        <span>
+                            LOCATION
+                        </span>
+
                         [REDACTED]
+
                     </p>
 
-                    <p>
-                        <span>SIGNAL</span>
-                        [REDACTED]
-                    </p>
 
                     <p>
-                        <span>RECORDING</span>
+
+                        <span>
+                            SIGNAL
+                        </span>
+
                         [REDACTED]
+
+                    </p>
+
+
+                    <p>
+
+                        <span>
+                            RECORDING
+                        </span>
+
+                        [REDACTED]
+
                     </p>
 
                 </div>
+
 
                 <div class="cameraFeed cameraRestrictedFeed">
 
@@ -730,8 +1084,10 @@ Further information remains classified.
 
             <div class="cameraFooter">
 
-                SURVEILLANCE NETWORK:
-                PARTIALLY RECOVERED
+                <span>
+                    SURVEILLANCE NETWORK:
+                    PARTIALLY RECOVERED
+                </span>
 
                 <span>
                     CAM-NET / 05 CHANNELS
@@ -739,11 +1095,13 @@ Further information remains classified.
 
             </div>
 
+
         </div>
 
     </div>
 
 </div>
+
 
 <!-- =====================================================
      AUDIO WINDOW
@@ -755,31 +1113,42 @@ Further information remains classified.
 
         Audio Logs
 
-        <span onclick="closeWindow('audioWindow')">✖</span>
+        <span onclick="closeWindow('audioWindow')">
+            ✖
+        </span>
 
     </div>
+
 
     <div class="windowContent">
 
         <div class="audioArchive">
 
+
             <div class="audioArchiveHeader">
                 AUDIO ARCHIVE
             </div>
+
 
             <div class="audioArchiveStatus">
                 RECOVERED RECORDINGS DATABASE
             </div>
 
+
             <br>
 
-            <!-- LOG 001 -->
+
+            <!-- =================================================
+                 LOG 001
+            ================================================= -->
 
             <div class="audioLog">
 
                 <div class="audioLogInfo">
 
-                    <strong>LOG-001</strong>
+                    <strong>
+                        LOG-001
+                    </strong>
 
                     <span>
                         PROJECT ORIENTATION
@@ -791,20 +1160,27 @@ Further information remains classified.
 
                 </div>
 
+
                 <button onclick="playAudioLog('LOG-001')">
+
                     PLAY RECORDING
+
                 </button>
 
             </div>
 
 
-            <!-- LOG 002 -->
+            <!-- =================================================
+                 LOG 002
+            ================================================= -->
 
             <div class="audioLog">
 
                 <div class="audioLogInfo">
 
-                    <strong>LOG-002</strong>
+                    <strong>
+                        LOG-002
+                    </strong>
 
                     <span>
                         [RESTRICTED]
@@ -816,20 +1192,27 @@ Further information remains classified.
 
                 </div>
 
+
                 <button onclick="playAudioLog('LOG-002')">
+
                     PLAY RECORDING
+
                 </button>
 
             </div>
 
 
-            <!-- LOG 003 -->
+            <!-- =================================================
+                 LOG 003
+            ================================================= -->
 
             <div class="audioLog">
 
                 <div class="audioLogInfo">
 
-                    <strong>LOG-003</strong>
+                    <strong>
+                        LOG-003
+                    </strong>
 
                     <span>
                         THE SIXTH DOOR
@@ -841,20 +1224,27 @@ Further information remains classified.
 
                 </div>
 
+
                 <button onclick="playAudioLog('LOG-003')">
+
                     PLAY RECORDING
+
                 </button>
 
             </div>
 
 
-            <!-- LOG 004 -->
+            <!-- =================================================
+                 LOG 004
+            ================================================= -->
 
             <div class="audioLog">
 
                 <div class="audioLogInfo">
 
-                    <strong>LOG-004</strong>
+                    <strong>
+                        LOG-004
+                    </strong>
 
                     <span>
                         [RESTRICTED]
@@ -866,52 +1256,85 @@ Further information remains classified.
 
                 </div>
 
+
                 <button onclick="playAudioLog('LOG-004')">
+
                     PLAY RECORDING
+
                 </button>
 
             </div>
 
 
-            <!-- PLAYER -->
+            <!-- =================================================
+                 AUDIO PLAYER
+            ================================================= -->
 
-            <div id="audioPlayer" class="archivePlayer">
+            <div
+            id="audioPlayer"
+            class="archivePlayer">
+
 
                 <div id="audioPlayerTitle">
+
                     NO RECORDING SELECTED
+
                 </div>
 
+
                 <div id="audioPlayerStatus">
+
                     STANDBY
+
                 </div>
+
 
                 <div class="reelArea">
 
+
                     <div class="reel leftReel"></div>
 
+
                     <div class="waveform">
+
                         ▂▄▆█▆▄▂▅█▃▆▄▂▇█▅▃
+
                     </div>
+
 
                     <div class="reel rightReel"></div>
 
+
                 </div>
+
 
                 <audio id="archiveAudio"></audio>
 
+
                 <div class="playerControls">
 
-                    <button onclick="toggleArchiveAudio()">
+
+                    <button
+                    onclick="toggleArchiveAudio()">
+
                         PLAY / PAUSE
+
                     </button>
 
-                    <button onclick="stopArchiveAudio()">
+
+                    <button
+                    onclick="stopArchiveAudio()">
+
                         STOP
+
                     </button>
+
 
                 </div>
 
+
             </div>
+
 
         </div>
 
@@ -920,7 +1343,15 @@ Further information remains classified.
 </div>
 
 
+</div>
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
 <script src="js/os.js"></script>
+
 
 </body>
 
