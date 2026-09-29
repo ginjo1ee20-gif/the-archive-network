@@ -987,6 +987,18 @@ function setupSD002(){
 
 
     /* =====================================================
+       IMPORTANT:
+       EXPLICITLY LOAD SD-002 AUDIO FILE
+    ===================================================== */
+
+    audio.src = "assets/audio/SD-002.mp3";
+
+    audio.preload = "metadata";
+
+    audio.load();
+
+
+    /* =====================================================
        AUDIO LOADED
     ===================================================== */
 
@@ -1023,6 +1035,33 @@ function setupSD002(){
 
 
     /* =====================================================
+       CAN PLAY
+    ===================================================== */
+
+    audio.addEventListener(
+        "canplay",
+        function(){
+
+            if(status &&
+               audio.readyState >= 3){
+
+                status.innerHTML = `
+                    AUDIO STATUS: READY
+                    <br>
+                    AUDIO INTEGRITY: 73%
+                    <br>
+                    RECOVERY STATUS: PARTIAL
+                    <br>
+                    SOURCE IDENTITY: [REDACTED]
+                `;
+
+            }
+
+        }
+    );
+
+
+    /* =====================================================
        AUDIO TIME UPDATE
     ===================================================== */
 
@@ -1030,7 +1069,14 @@ function setupSD002(){
         "timeupdate",
         function(){
 
-            if(!audio.duration) return;
+            if(
+                !audio.duration ||
+                !isFinite(audio.duration)
+            ){
+
+                return;
+
+            }
 
 
             progress.value =
@@ -1154,6 +1200,11 @@ function setupSD002(){
 
             player.classList.remove("playing");
 
+            console.error(
+                "SD-002 AUDIO ERROR:",
+                audio.error
+            );
+
 
             if(status){
 
@@ -1179,7 +1230,14 @@ function setupSD002(){
         "input",
         function(){
 
-            if(!audio.duration) return;
+            if(
+                !audio.duration ||
+                !isFinite(audio.duration)
+            ){
+
+                return;
+
+            }
 
 
             audio.currentTime =
@@ -1212,6 +1270,28 @@ function playSD002(){
     }
 
 
+    /*
+     * Make absolutely sure the correct
+     * SD-002 file is being used.
+     */
+
+    audio.src = "assets/audio/SD-002.mp3";
+
+
+    /*
+     * If the browser has not loaded the file yet,
+     * force it to load.
+     */
+
+    if(
+        audio.readyState === 0
+    ){
+
+        audio.load();
+
+    }
+
+
     audio.play()
     .then(function(){
 
@@ -1230,7 +1310,13 @@ function playSD002(){
         }
 
     })
-    .catch(function(){
+    .catch(function(error){
+
+        console.error(
+            "SD-002 PLAYBACK ERROR:",
+            error
+        );
+
 
         if(status){
 
