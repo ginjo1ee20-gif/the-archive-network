@@ -263,29 +263,171 @@ Camera Feed Offline
 
 <div id="audioWindow" class="window">
 
-<div class="windowTitle">
+    <div class="windowTitle">
 
-Audio Logs
+        Audio Logs
 
-<span onclick="closeWindow('audioWindow')">✖</span>
+        <span onclick="closeWindow('audioWindow')">✖</span>
 
-</div>
+    </div>
 
-<div class="windowContent">
+    <div class="windowContent">
 
-<p>
+        <div class="audioArchive">
 
-Recovered audio files may be accessed through the Archive Terminal.
+            <div class="audioArchiveHeader">
+                AUDIO ARCHIVE
+            </div>
 
-</p>
+            <div class="audioArchiveStatus">
+                RECOVERED RECORDINGS DATABASE
+            </div>
 
-<br>
+            <br>
 
-<p>
-STATUS: ARCHIVE STORAGE ONLINE
-</p>
+            <!-- LOG 001 -->
 
-</div>
+            <div class="audioLog">
+
+                <div class="audioLogInfo">
+
+                    <strong>LOG-001</strong>
+
+                    <span>
+                        PROJECT ORIENTATION
+                    </span>
+
+                    <small>
+                        STATUS: RECOVERED
+                    </small>
+
+                </div>
+
+                <button onclick="playAudioLog('LOG-001')">
+                    PLAY RECORDING
+                </button>
+
+            </div>
+
+
+            <!-- LOG 002 -->
+
+            <div class="audioLog">
+
+                <div class="audioLogInfo">
+
+                    <strong>LOG-002</strong>
+
+                    <span>
+                        [RESTRICTED]
+                    </span>
+
+                    <small>
+                        STATUS: PARTIAL
+                    </small>
+
+                </div>
+
+                <button onclick="playAudioLog('LOG-002')">
+                    PLAY RECORDING
+                </button>
+
+            </div>
+
+
+            <!-- LOG 003 -->
+
+            <div class="audioLog">
+
+                <div class="audioLogInfo">
+
+                    <strong>LOG-003</strong>
+
+                    <span>
+                        THE SIXTH DOOR
+                    </span>
+
+                    <small>
+                        STATUS: CORRUPTED
+                    </small>
+
+                </div>
+
+                <button onclick="playAudioLog('LOG-003')">
+                    PLAY RECORDING
+                </button>
+
+            </div>
+
+
+            <!-- LOG 004 -->
+
+            <div class="audioLog">
+
+                <div class="audioLogInfo">
+
+                    <strong>LOG-004</strong>
+
+                    <span>
+                        [RESTRICTED]
+                    </span>
+
+                    <small>
+                        STATUS: RECOVERED
+                    </small>
+
+                </div>
+
+                <button onclick="playAudioLog('LOG-004')">
+                    PLAY RECORDING
+                </button>
+
+            </div>
+
+
+            <!-- PLAYER -->
+
+            <div id="audioPlayer" class="archivePlayer">
+
+                <div id="audioPlayerTitle">
+                    NO RECORDING SELECTED
+                </div>
+
+                <div id="audioPlayerStatus">
+                    STANDBY
+                </div>
+
+                <div class="reelArea">
+
+                    <div class="reel leftReel"></div>
+
+                    <div class="waveform">
+                        ▂▄▆█▆▄▂▅█▃▆▄▂▇█▅▃
+                    </div>
+
+                    <div class="reel rightReel"></div>
+
+                </div>
+
+                <audio id="archiveAudio"></audio>
+
+                <div class="playerControls">
+
+                    <button onclick="toggleArchiveAudio()">
+                        PLAY / PAUSE
+                    </button>
+
+                    <button onclick="stopArchiveAudio()">
+                        STOP
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </div>
 
