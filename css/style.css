@@ -681,3 +681,742 @@ footer{
         padding:20px;
     }
 }
+
+/* ==========================
+   AUDIO ARCHIVE
+========================== */
+
+.audioArchive{
+
+    width:100%;
+
+}
+
+.audioArchiveHeader{
+
+    color:#C9A227;
+
+    font-size:20px;
+
+    letter-spacing:3px;
+
+    border-bottom:1px solid #C9A227;
+
+    padding-bottom:10px;
+
+}
+
+.audioArchiveStatus{
+
+    color:#777;
+
+    font-size:12px;
+
+    margin-top:8px;
+
+}
+
+.audioLog{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:20px;
+
+    padding:15px;
+
+    margin-bottom:10px;
+
+    background:#0b0907;
+
+    border:1px solid #4d4025;
+
+}
+
+.audioLog:hover{
+
+    border-color:#C9A227;
+
+    background:#11100d;
+
+}
+
+.audioLogInfo{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:5px;
+
+}
+
+.audioLogInfo strong{
+
+    color:#C9A227;
+
+    font-size:16px;
+
+}
+
+.audioLogInfo span{
+
+    color:#EAEAEA;
+
+    font-size:13px;
+
+}
+
+.audioLogInfo small{
+
+    color:#777;
+
+    font-size:11px;
+
+}
+
+.audioLog button{
+
+    padding:8px 12px;
+
+    font-size:11px;
+
+    white-space:nowrap;
+
+}
+
+.archivePlayer{
+
+    display:none;
+
+    margin-top:25px;
+
+    padding:20px;
+
+    border:2px solid #C9A227;
+
+    background:#050403;
+
+}
+
+#audioPlayerTitle{
+
+    color:#C9A227;
+
+    font-size:16px;
+
+    letter-spacing:2px;
+
+}
+
+#audioPlayerStatus{
+
+    color:#777;
+
+    font-size:11px;
+
+    margin-top:6px;
+
+}
+
+.reelArea{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:25px;
+
+    margin:25px 0;
+
+}
+
+.reel{
+
+    width:55px;
+
+    height:55px;
+
+    border:3px solid #777;
+
+    border-radius:50%;
+
+    position:relative;
+
+}
+
+.reel::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:15px;
+
+    height:15px;
+
+    border:2px solid #777;
+
+    border-radius:50%;
+
+    top:17px;
+
+    left:17px;
+
+}
+
+.waveform{
+
+    color:#C9A227;
+
+    letter-spacing:2px;
+
+    font-size:18px;
+
+}
+
+.playerControls{
+
+    display:flex;
+
+    gap:10px;
+
+    justify-content:center;
+
+}
+
+.playerControls button{
+
+    font-size:11px;
+
+    padding:8px 15px;
+
+}
+
+
+/* Reel animation */
+
+.reel.spinning{
+
+    animation:reelSpin 1s linear infinite;
+
+}
+
+@keyframes reelSpin{
+
+    from{
+
+        transform:rotate(0deg);
+
+    }
+
+    to{
+
+        transform:rotate(360deg);
+
+    }
+
+}
+
+
+/* Mobile */
+
+@media(max-width:700px){
+
+    .audioLog{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+
+    }
+
+    .audioLog button{
+
+        width:100%;
+
+    }
+
+    .reelArea{
+
+        gap:10px;
+
+    }
+
+    .waveform{
+
+        font-size:12px;
+
+    }
+
+}
+
+/* =========================================================
+   SD-001 — RECOVERED ARCHIVE DOCUMENT
+========================================================= */
+
+.sd001Document{
+
+    position:relative;
+
+    width:100%;
+
+    margin:15px auto;
+
+    padding:24px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #211f18 0%,
+            #181711 50%,
+            #12110d 100%
+        );
+
+    border:3px double #756443;
+
+    color:#c8c0ad;
+
+    font-family:"IBM Plex Mono", monospace;
+
+    box-shadow:
+        inset 0 0 35px rgba(0,0,0,.7),
+        5px 5px 0 rgba(0,0,0,.35);
+
+    overflow:hidden;
+
+}
+
+
+/* OLD ARCHIVE PAPER / SCAN EFFECT */
+
+.sd001Document::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+    background:
+        repeating-linear-gradient(
+            0deg,
+            transparent 0px,
+            transparent 3px,
+            rgba(220,210,180,.025) 4px
+        );
+
+}
+
+
+/* TOP LINE */
+
+.sd001TopLine{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    padding-bottom:10px;
+
+    border-bottom:1px solid #665a42;
+
+    color:#91876e;
+
+    font-size:9px;
+
+    letter-spacing:2px;
+
+}
+
+
+/* CLASSIFIED STAMP */
+
+.sd001Classification{
+
+    position:relative;
+
+    display:inline-block;
+
+    margin-top:18px;
+
+    padding:6px 10px;
+
+    border:2px solid #824444;
+
+    color:#9b5555;
+
+    font-size:10px;
+
+    letter-spacing:2px;
+
+    transform:rotate(-4deg);
+
+    opacity:.85;
+
+}
+
+
+/* DOCUMENT HEADER */
+
+.sd001Header{
+
+    position:relative;
+
+    text-align:center;
+
+    padding:25px 0 20px;
+
+}
+
+
+.sd001SmallTitle{
+
+    color:#81775f;
+
+    font-size:9px;
+
+    letter-spacing:3px;
+
+    margin-bottom:10px;
+
+}
+
+
+.sd001Header h2{
+
+    margin:0;
+
+    color:#c5b58b;
+
+    font-size:18px;
+
+    font-weight:500;
+
+    letter-spacing:3px;
+
+}
+
+
+.sd001DocumentTitle{
+
+    margin-top:10px;
+
+    color:#91876e;
+
+    font-size:11px;
+
+    letter-spacing:2px;
+
+}
+
+
+/* METADATA */
+
+.sd001Meta{
+
+    position:relative;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:8px 20px;
+
+    padding:15px;
+
+    border:1px solid #4f4633;
+
+    background:#12110d;
+
+    color:#aaa18d;
+
+    font-size:9px;
+
+}
+
+
+.sd001Meta div{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:3px;
+
+}
+
+
+.sd001Meta span{
+
+    color:#716852;
+
+    font-size:8px;
+
+    letter-spacing:1px;
+
+}
+
+
+.sd001Divider{
+
+    position:relative;
+
+    height:1px;
+
+    background:#756443;
+
+    margin:22px 0;
+
+}
+
+
+/* SECTIONS */
+
+.sd001Section{
+
+    position:relative;
+
+    margin-bottom:22px;
+
+}
+
+
+.sd001SectionTitle{
+
+    margin-bottom:9px;
+
+    color:#b49a63;
+
+    font-size:10px;
+
+    letter-spacing:2px;
+
+}
+
+
+.sd001Section p{
+
+    margin:7px 0;
+
+    color:#b7af9c;
+
+    font-size:11px;
+
+    line-height:1.8;
+
+}
+
+
+/* INTERNAL NOTE */
+
+.sd001Internal{
+
+    position:relative;
+
+    margin:20px 0;
+
+    padding:15px;
+
+    border-left:3px solid #756443;
+
+    background:#12110d;
+
+}
+
+
+.sd001Internal p{
+
+    margin:7px 0;
+
+    color:#aaa18d;
+
+    font-size:11px;
+
+    line-height:1.8;
+
+}
+
+
+/* REDACTED SECTION */
+
+.sd001Redacted{
+
+    position:relative;
+
+    margin-top:25px;
+
+    padding:15px;
+
+    border:1px dashed #504733;
+
+    background:#100f0c;
+
+}
+
+
+.sd001BlackLine{
+
+    display:block;
+
+    margin:8px 0;
+
+    color:#28261f;
+
+    background:#28261f;
+
+    line-height:10px;
+
+    height:10px;
+
+    overflow:hidden;
+
+}
+
+
+.sd001RedactedText{
+
+    margin-top:12px;
+
+    color:#655e50;
+
+    font-size:8px;
+
+    letter-spacing:1px;
+
+}
+
+
+/* DAMAGED DOCUMENT */
+
+.sd001Damaged{
+
+    position:relative;
+
+    margin-top:25px;
+
+    padding-top:20px;
+
+    border-top:1px dashed #504733;
+
+}
+
+
+.sd001Damaged p{
+
+    color:#817a6a;
+
+    font-size:10px;
+
+    line-height:1.7;
+
+}
+
+
+.sd001Missing{
+
+    margin-top:15px;
+
+    padding:12px;
+
+    text-align:center;
+
+    color:#665f51;
+
+    font-size:9px;
+
+    line-height:2;
+
+}
+
+
+/* DOCUMENT FOOTER */
+
+.sd001Footer{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:15px;
+
+    margin-top:25px;
+
+    padding-top:10px;
+
+    border-top:1px solid #504733;
+
+    color:#655e50;
+
+    font-size:8px;
+
+    letter-spacing:1px;
+
+}
+
+
+.sd001FooterWarning{
+
+    position:relative;
+
+    margin-top:15px;
+
+    text-align:center;
+
+    color:#544d40;
+
+    font-size:7px;
+
+    letter-spacing:2px;
+
+}
+
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+    .sd001Document{
+
+        padding:15px;
+
+    }
+
+    .sd001TopLine{
+
+        flex-direction:column;
+
+        gap:7px;
+
+    }
+
+    .sd001Header h2{
+
+        font-size:14px;
+
+    }
+
+    .sd001Meta{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .sd001Footer{
+
+        flex-direction:column;
+
+    }
+
+}

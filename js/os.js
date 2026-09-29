@@ -160,49 +160,265 @@ function terminalEnter(event){
 
 
         /* =========================
-           SD-001
-        ========================= */
+   SD-001
+========================= */
 
-        case "sd-001":
+case "sd-001":
 
-            output.innerHTML += `
+    output.innerHTML += `
 
-            <span class="green">
-            CODE VERIFIED
-            </span>
+        <span class="green">
+        CODE VERIFIED
+        </span>
 
-            <br>
-            ----------------
-            <br>
+        <br>
+        ----------------
+        <br><br>
 
-            CLASSIFIED FILE SD-001
+        <div class="sd001Document">
 
-            <br><br>
+            <!-- DOCUMENT HEADER -->
 
-            ARCHIVE STATUS: UNLOCKED
-            <br>
-            FILE TYPE: RESEARCH DATA
-            <br>
-            SECURITY LEVEL: CLASSIFIED
+            <div class="sd001TopLine">
 
-            <br><br>
+                <span>
+                    ARCHIVE RESEARCH DIVISION
+                </span>
 
-            <img
-            src="assets/images/SD-001.png"
-            alt="SD-001 Classified Research Dossier"
-            style="
-                width:100%;
-                max-width:700px;
-                display:block;
-                margin:20px auto;
-                border:1px solid #665a42;
-            ">
+                <span>
+                    SD-001
+                </span>
 
-            <br>
+            </div>
 
-            `;
 
-        break;
+            <div class="sd001Classification">
+
+                CLASSIFIED
+
+            </div>
+
+
+            <!-- TITLE -->
+
+            <div class="sd001Header">
+
+                <div class="sd001SmallTitle">
+                    CENTRAL RESEARCH ARCHIVE
+                </div>
+
+                <h2>
+                    THE SIXTH DOOR PROJECT
+                </h2>
+
+                <div class="sd001DocumentTitle">
+                    RESEARCH DOCUMENT — SD-001
+                </div>
+
+            </div>
+
+
+            <!-- METADATA -->
+
+            <div class="sd001Meta">
+
+                <div>
+                    <span>DOCUMENT ID</span>
+                    SD-001
+                </div>
+
+                <div>
+                    <span>PROJECT</span>
+                    THE SIXTH DOOR
+                </div>
+
+                <div>
+                    <span>SECURITY</span>
+                    CLASSIFIED
+                </div>
+
+                <div>
+                    <span>STATUS</span>
+                    PARTIALLY RECOVERED
+                </div>
+
+                <div>
+                    <span>ARCHIVE CONDITION</span>
+                    DAMAGED
+                </div>
+
+                <div>
+                    <span>RECOVERY DATE</span>
+                    [REDACTED]
+                </div>
+
+            </div>
+
+
+            <div class="sd001Divider"></div>
+
+
+            <!-- RESEARCH SECTION -->
+
+            <div class="sd001Section">
+
+                <div class="sd001SectionTitle">
+                    RESEARCH NOTE 01
+                </div>
+
+                <p>
+                    The subject continues to respond normally
+                    to the testing environment.
+                </p>
+
+                <p>
+                    Initial observations indicate that the
+                    subject is capable of completing all
+                    assigned tasks without external assistance.
+                </p>
+
+                <p>
+                    No significant physical abnormalities
+                    have been recorded at this stage.
+                </p>
+
+            </div>
+
+
+            <!-- OBSERVATION -->
+
+            <div class="sd001Section">
+
+                <div class="sd001SectionTitle">
+                    OBSERVATIONS
+                </div>
+
+                <p>
+                    Several inconsistencies have appeared
+                    during the later stages of testing.
+                </p>
+
+                <p>
+                    The subject has reported brief periods
+                    of missing information concerning
+                    previous events.
+                </p>
+
+                <p>
+                    These reports have not been confirmed
+                    by the research personnel.
+                </p>
+
+            </div>
+
+
+            <!-- INTERNAL NOTE -->
+
+            <div class="sd001Internal">
+
+                <div class="sd001SectionTitle">
+                    INTERNAL NOTE
+                </div>
+
+                <p>
+                    Personnel are advised not to question
+                    the subject regarding previously
+                    completed procedures.
+                </p>
+
+                <p>
+                    Further investigation has been
+                    authorized.
+                </p>
+
+            </div>
+
+
+            <!-- REDACTED INFORMATION -->
+
+            <div class="sd001Redacted">
+
+                <div class="sd001SectionTitle">
+                    REMOVED INFORMATION
+                </div>
+
+                <div class="sd001BlackLine">
+                    ███████████████████████████████████
+                </div>
+
+                <div class="sd001BlackLine">
+                    ██████████████████████████
+                </div>
+
+                <div class="sd001BlackLine">
+                    ███████████████████████████████████████
+                </div>
+
+                <div class="sd001RedactedText">
+                    INFORMATION WITHHELD BY ARCHIVE AUTHORITY
+                </div>
+
+            </div>
+
+
+            <!-- DAMAGED SECTION -->
+
+            <div class="sd001Damaged">
+
+                <div class="sd001SectionTitle">
+                    DOCUMENT RECOVERY
+                </div>
+
+                <p>
+                    The remainder of this document could not
+                    be recovered.
+                </p>
+
+                <div class="sd001Missing">
+
+                    ───────────────────────────────
+
+                    <br>
+
+                    DOCUMENT CONTINUES — DATA MISSING
+
+                    <br>
+
+                    ───────────────────────────────
+
+                </div>
+
+            </div>
+
+
+            <!-- FOOTER -->
+
+            <div class="sd001Footer">
+
+                <span>
+                    ARCHIVE COPY — SD-001
+                </span>
+
+                <span>
+                    PAGE 01 / 03
+                </span>
+
+            </div>
+
+
+            <div class="sd001FooterWarning">
+
+                UNAUTHORIZED DUPLICATION PROHIBITED
+
+            </div>
+
+        </div>
+
+        <br><br>
+
+    `;
+
+break;
 
 
         /* =========================
@@ -406,110 +622,118 @@ function terminalEnter(event){
         break;
 
 
+        /* =========================
+           SECRET CREATOR MESSAGE
+        ========================= */
+
         case "creator-1.00.4.6/real":
 
-    output.innerHTML += `
-    <br>
+            output.innerHTML += `
 
-    <div style="
-        border:1px solid #C9A227;
-        padding:25px;
-        margin-top:15px;
-        background:#080706;
-        color:#EAEAEA;
-        line-height:1.8;
-        font-family:'IBM Plex Mono', monospace;
-    ">
+            <br>
 
-        <div style="
-            color:#C9A227;
-            text-align:center;
-            margin-bottom:25px;
-            letter-spacing:2px;
-        ">
-            [ PRIVATE CREATOR MESSAGE ]
-        </div>
+            <div style="
+                border:1px solid #C9A227;
+                padding:25px;
+                margin-top:15px;
+                background:#080706;
+                color:#EAEAEA;
+                line-height:1.8;
+                font-family:'IBM Plex Mono', monospace;
+            ">
 
-        Hey dear genius.
-        <br><br>
+                <div style="
+                    color:#C9A227;
+                    text-align:center;
+                    margin-bottom:25px;
+                    letter-spacing:2px;
+                ">
+                    [ PRIVATE CREATOR MESSAGE ]
+                </div>
 
-        If you're reading this, you actually found it.
-        <br><br>
+                Hey dear genius.
+                <br><br>
 
-        This isn't part of the story.
-        <br>
-        It's not another experiment.
-        <br>
-        And it's not some secret character.
-        <br><br>
+                If you're reading this, you actually found it.
+                <br><br>
 
-        It's me. The creator.
-        <br><br>
+                This isn't part of the story.
+                <br>
+                It's not another experiment.
+                <br>
+                And it's not some secret character.
+                <br><br>
 
-        I'm the person who created The Sixth Door and built this Archive.
-        <br><br>
+                It's me. The creator.
+                <br><br>
 
-        I wanted to leave something here for the people who were curious enough to look deeper and understand everything.
-        <br><br>
+                I'm the person who created The Sixth Door and built this Archive.
+                <br><br>
 
-        You could've just played the game and left.
-        <br><br>
+                I wanted to leave something here for the people who were curious enough to look deeper and understand everything.
+                <br><br>
 
-        But you didn't.
-        <br><br>
+                You could've just played the game and left.
+                <br><br>
 
-        So... thank you very much.
-        <br><br>
+                But you didn't.
+                <br><br>
 
-        Every hidden file, every strange code, every little detail you found was put here for a reason.
-        <br><br>
+                So... thank you very much.
+                <br><br>
 
-        And somehow, you found your way to this one.
-        <br><br>
+                Every hidden file, every strange code, every little detail you found was put here for a reason.
+                <br><br>
 
-        And just to make some things clear:
-        <br><br>
+                And somehow, you found your way to this one.
+                <br><br>
 
-        This message is real.
-        <br><br>
+                And just to make some things clear:
+                <br><br>
 
-        I'm not a character in the story.
-        <br>
-        This isn't part of the lore.
-        <br>
-        And you don't need to look for some hidden meaning in this message.
-        <br><br>
+                This message is real.
+                <br><br>
 
-        It's just me.
-        <br><br>
+                I'm not a character in the story.
+                <br>
+                This isn't part of the lore.
+                <br>
+                And you don't need to look for some hidden meaning in this message.
+                <br><br>
 
-        The actual creator of this project, saying thank you to the people who cared enough to look this far.
-        <br><br>
+                It's just me.
+                <br><br>
 
-        There isn't anything else you need to do here.
-        <br><br>
+                The actual creator of this project, saying thank you to the people who cared enough to look this far.
+                <br><br>
 
-        You found me.
-        <br><br>
+                There isn't anything else you need to do here.
+                <br><br>
 
-        Thank you for playing The Sixth Door.
-        <br><br>
+                You found me.
+                <br><br>
 
-        And thank you for being curious.
-        <br><br>
+                Thank you for playing The Sixth Door.
+                <br><br>
 
-        <span style="color:#C9A227;">
-            Iyad Mutwakill
-        </span>
-        <br>
-        Creator of Project: The Sixth Door
+                And thank you for being curious.
+                <br><br>
 
-    </div>
+                <span style="color:#C9A227;">
+                    Iyad Mutwakill
+                </span>
+                <br>
+                Creator of Project: The Sixth Door
 
-    <br><br>
-    `;
+            </div>
 
-break;
+            <br><br>
+
+            `;
+
+        break;
+
+
         /* =========================
            UNKNOWN
         ========================= */
@@ -661,6 +885,201 @@ function stopSD002(){
 }
 
 
+/* =========================================================
+   AUDIO LOG ARCHIVE
+========================================================= */
+
+const audioLogs = {
+
+    "LOG-001":
+        "assets/audio/LOG-001.mp3",
+
+    "LOG-002":
+        "assets/audio/LOG-002.mp3",
+
+    "LOG-003":
+        "assets/audio/LOG-003.mp3",
+
+    "LOG-004":
+        "assets/audio/LOG-004.mp3"
+
+};
+
+
+function playAudioLog(logID){
+
+    const audio =
+        document.getElementById("archiveAudio");
+
+    const player =
+        document.getElementById("audioPlayer");
+
+    const title =
+        document.getElementById("audioPlayerTitle");
+
+    const status =
+        document.getElementById("audioPlayerStatus");
+
+
+    if(!audio || !player) return;
+
+
+    const file =
+        audioLogs[logID];
+
+
+    if(!file){
+
+        if(status){
+
+            status.textContent =
+                "RECORDING FILE NOT FOUND";
+
+        }
+
+        return;
+
+    }
+
+
+    audio.src = file;
+
+    title.textContent = logID;
+
+    status.textContent =
+        "LOADING RECORDING...";
+
+
+    player.style.display = "block";
+
+
+    audio.load();
+
+
+    audio.play().then(function(){
+
+        status.textContent =
+            "PLAYING — " + logID;
+
+        startAudioReels();
+
+    }).catch(function(){
+
+        status.textContent =
+            "READY — PRESS PLAY";
+
+    });
+
+}
+
+
+function toggleArchiveAudio(){
+
+    const audio =
+        document.getElementById("archiveAudio");
+
+
+    if(!audio) return;
+
+
+    const status =
+        document.getElementById("audioPlayerStatus");
+
+
+    if(audio.paused){
+
+        audio.play();
+
+        if(status){
+
+            status.textContent =
+                "PLAYING";
+
+        }
+
+        startAudioReels();
+
+    }
+
+    else{
+
+        audio.pause();
+
+        if(status){
+
+            status.textContent =
+                "PAUSED";
+
+        }
+
+        stopAudioReels();
+
+    }
+
+}
+
+
+function stopArchiveAudio(){
+
+    const audio =
+        document.getElementById("archiveAudio");
+
+
+    if(!audio) return;
+
+
+    audio.pause();
+
+    audio.currentTime = 0;
+
+
+    const status =
+        document.getElementById("audioPlayerStatus");
+
+
+    if(status){
+
+        status.textContent =
+            "STOPPED";
+
+    }
+
+
+    stopAudioReels();
+
+}
+
+
+function startAudioReels(){
+
+    document
+    .querySelectorAll("#audioPlayer .reel")
+    .forEach(function(reel){
+
+        reel.classList.add("spinning");
+
+    });
+
+}
+
+
+function stopAudioReels(){
+
+    document
+    .querySelectorAll("#audioPlayer .reel")
+    .forEach(function(reel){
+
+        reel.classList.remove("spinning");
+
+    });
+
+}
+
+
+/* =========================================================
+   FORMAT TIME
+========================================================= */
+
 function formatTime(seconds){
 
     if(!seconds || isNaN(seconds)){
@@ -669,11 +1088,14 @@ function formatTime(seconds){
 
     }
 
+
     const minutes =
         Math.floor(seconds / 60);
 
+
     const secs =
         Math.floor(seconds % 60);
+
 
     return (
         String(minutes).padStart(2,"0")
@@ -702,7 +1124,8 @@ function openWindow(id){
 
     highestZ++;
 
-    win.style.zIndex = highestZ;
+    win.style.zIndex =
+        highestZ;
 
 }
 
