@@ -398,63 +398,147 @@ footer{
    WINDOWS
 ========================================================= */
 
+/* =========================================================
+   WINDOWS — SCROLLABLE ARCHIVE PANELS
+========================================================= */
+
 .window{
+
     display:none;
+
     position:absolute;
+
     top:110px;
     left:250px;
+
     width:500px;
     min-width:300px;
+
+    max-height:75vh;
+
     background:#191812;
+
     border:3px double #756443;
+
     box-shadow:8px 8px 0 rgba(0,0,0,.4);
+
     overflow:hidden;
+
     user-select:none;
+
     animation:windowOpen .18s ease-out;
+
 }
+
+
+/* WINDOW TITLE BAR */
 
 .windowTitle{
+
     height:38px;
+
+    flex-shrink:0;
+
     background:#29261c;
+
     color:#c5b58b;
+
     border-bottom:2px solid #665a42;
+
     padding:8px 12px;
+
     display:flex;
+
     justify-content:space-between;
+
     align-items:center;
+
     font-weight:bold;
+
     letter-spacing:1px;
+
     cursor:move;
+
 }
+
 
 .windowTitle span{
+
     cursor:pointer;
+
     color:#a69b80;
+
 }
+
 
 .windowTitle span:hover{
+
     color:#d5bd7d;
+
 }
+
+
+/* SCROLLABLE CONTENT */
 
 .windowContent{
+
+    max-height:calc(75vh - 43px);
+
+    overflow-y:auto;
+
+    overflow-x:hidden;
+
     padding:20px;
+
     line-height:1.8;
+
     color:#aaa28e;
+
+    scrollbar-width:thin;
+
+    scrollbar-color:#756443 #0d0d0b;
+
 }
+
+
+/* CHROME / EDGE / WINDOWS SCROLLBAR */
+
+.windowContent::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+
+.windowContent::-webkit-scrollbar-track{
+
+    background:#0d0d0b;
+
+    border-left:1px solid #3e382b;
+
+}
+
+
+.windowContent::-webkit-scrollbar-thumb{
+
+    background:#756443;
+
+    border:2px solid #0d0d0b;
+
+}
+
+
+.windowContent::-webkit-scrollbar-thumb:hover{
+
+    background:#b49a63;
+
+}
+
 
 .windowContent h2{
-    color:#c5b58b;
-}
 
-@keyframes windowOpen{
-    from{
-        opacity:0;
-        transform:scale(.97);
-    }
-    to{
-        opacity:1;
-        transform:scale(1);
-    }
+    color:#c5b58b;
+
 }
 
 /* =========================================================
